@@ -1,4 +1,9 @@
+:root{ /* DEFINICION VARIABLES GLOBALES */
+    --naranja: #EA7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
+    --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
+}
+
 body, html {
-    font-family: Raleway;
+    font-family: Raleway; /* fuente no funca? elegir otra */
     font-style: normal;
 }
