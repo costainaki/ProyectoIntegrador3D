@@ -1,4 +1,40 @@
+:root{ /* DEFINICION VARIABLES GLOBALES */
+    --naranja: #EA7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
+    --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
+}
+
+/* ESTILOS GENERALES */
+
 body, html {
-    font-family: Raleway;
+    display: grid;
+    font-family: Raleway; /* fuente no funca? elegir otra */
     font-style: normal;
+    background-color: var(--gris-oscuro);
+}
+
+/* CLASES */
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--naranja);
+}
+
+.banner .logo {
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50px;
+}
+
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
