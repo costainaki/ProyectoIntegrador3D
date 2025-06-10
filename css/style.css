@@ -1,14 +1,3 @@
-:root {
-    --naranja: #EA7600;
-    --gris-oscuro: #1c1c1c;
-  }
-  
-  body {
-    background-color: var(--gris-oscuro);
-    font-family: 'Raleway', sans-serif;
-  }
-  
-  .banner {
 :root{ /* DEFINICION VARIABLES GLOBALES */
     --naranja: #EA7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
     --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
@@ -56,17 +45,16 @@ body, html {
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: black;
-    position: fixed;
   }
   
-  .logo-capsule {
-    background-color: white;
+.logo-capsule {
+    background-color: var(--blanco);
     padding: 6px 12px;
     border-radius: 0 999px 999px 0;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin-left: 0;
+    margin-left: 0PX!IMPORTANT;
 }
 
 .logo-capsule img {
@@ -75,39 +63,37 @@ body, html {
     display: block;
 }
   
-  .menu-icon {
-    font-size: 1.5rem;
-    color: black;
-    cursor: pointer;
-    margin-right: 5 px;
-  }
-  
-  .offcanvas {
-    transition: transform 0.2s ease-in-out;
-    background-color: #fff;
-  }
-
-  .offcanvas-start {
-    width: 280px !important;
-  }
-  
-  .offcanvas-below-navbar {
-    top: 98px !important; /* Ajusta este valor a la altura exacta de tu navbar */
-    height: calc(100% - 70px) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .offcanvas-backdrop {
-    display: none !important;
-  }
-  
-  .subtema {
-    font-size: 15px;
-    padding-left: 50px;
-  }
-  
-    text-align: left;
+.menu-icon {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  margin-right: 5 px;
 }
+
+.offcanvas {
+  transition: transform 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+.offcanvas-start {
+  width: 280px !important;
+}
+
+.offcanvas-below-navbar {
+  top: 98px !important; /* Ajusta este valor a la altura exacta de tu navbar */
+  height: calc(100% - 70px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+.subtema {
+  font-size: 15px;
+  padding-left: 50px;
+}
+
 
 .navitem {
     font-weight: 700;
