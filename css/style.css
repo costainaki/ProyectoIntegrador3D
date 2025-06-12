@@ -11,6 +11,8 @@ body, html {
     font-family: "Open Sans", sans-serif; /* fuente no funca? elegir otra */
     font-style: normal;
     background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
 }
 
 /* CLASES */
@@ -94,8 +96,46 @@ body, html {
   padding-left: 50px;
 }
 
-
 .navitem {
     font-weight: 700;
     font-size: 20px;
+}
+
+.py-5.text-center.container {
+    text-align: center;
+    color: var(--gris-oscuro);
+}
+
+h1.fw-light {
+    font-size: 88px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.lead.text-body-secondary {
+    font-size: 1.25rem;
+    color: #666666; /* gris suave */
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #d46700;
+    border-color: #d46700;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
 }
