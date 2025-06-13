@@ -1,9 +1,11 @@
-:root{ /* DEFINICION VARIABLES GLOBALES */
-    --naranja: #EA7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
-    --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
-    --blanco: #f7f7f7;
+/* ---------------------- ESTILOS GENERALES ---------------------- */
+:root {
+  --naranja: #ea7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
+  --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
+  --blanco: #f7f7f7;
 }
 
+<<<<<<< HEAD
 /* ESTILOS GENERALES */
 
 body, html {
@@ -13,65 +15,242 @@ body, html {
     background-color: var(--blanco);
     margin: 0;
     padding: 0;
+=======
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  background-color: var(--blanco);
+  padding-top: 0px;
+>>>>>>> 6f1298b (menú, navbar y subpagina 1 modificados asi re piola)
 }
 
-/* CLASES */
+.main {
+  margin-left: 0px;
+  flex: 1;
+}
 
 .texto {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
 }
 
 .titulo {
-    font-size: 88px;
+  font-size: 64px;
+  transition: color 0.3s ease;
 }
 
-/* Font weights 100 to 800 (Open Sans) */
-.w100 { font-weight: 100; }
-.w200 { font-weight: 200; }
-.w300 { font-weight: 300; }
-.w400 { font-weight: 400; }
-.w500 { font-weight: 500; }
-.w600 { font-weight: 600; }
-.w700 { font-weight: 700; }
-.w800 { font-weight: 800; }
+.titulo:hover {
+  color: var(--naranja);
+}
 
+.contenido {
+  margin-right: 0 !important;
+  box-sizing: inherit;
+}
+
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+.w500 {
+  font-weight: 500;
+}
+.w600 {
+  font-weight: 600;
+}
+.w700 {
+  font-weight: 700;
+}
+.w800 {
+  font-weight: 800;
+}
+/* ---------------------- FIN ESTILOS GENERALES ---------------------- */
+
+/* ---------------------- NAVBAR ---------------------- */
 .banner {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: var(--naranja);
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    color: black;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: var(--naranja);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .logo-capsule {
-    background-color: var(--blanco);
-    padding: 6px 12px;
-    border-radius: 0 999px 999px 0;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin-left: 0PX!IMPORTANT;
+  background-color: var(--blanco);
+  padding: 2px 3px;
+  border-radius: 0 99px 99px 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 0px !important;
+  padding-left: 0 !important;
 }
 
 .logo-capsule img {
-    height: 70px;
-    width: auto;
-    display: block;
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
-  
+
+.logo-capsule img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* o el color que combine */
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.navitem {
+  font-weight: 700;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navitem:hover {
+  color: white;
+}
+/* ---------------------- FIN NAVBAR ---------------------- */
+
+/*----------------- SIDEBAR ----------------------*/
+.sidebar {
+  position: fixed;
+  top: 100px; /* altura del menú*/
+  left: 0;
+  width: 250px;
+  height: calc(100% - 100px);
+  background-color: white;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 1030;
+}
+
+.sidebar h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sidebar .accordion-button {
+  background-color: transparent;
+  padding-left: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: center;
+}
+
+.sidebar .accordion-button:hover {
+  background-color: var(--naranja);
+  color: white;
+}
+
+.sidebar .accordion-item {
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .accordion-subbody {
+  background-color: whitesmoke;
+}
+
+.accordion-button {
+  background-color: #f97316;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.accordion-button.collapsed {
+  background-color: #fb923c;
+  color: white;
+}
+
+.accordion-button:hover {
+  background-color: #ea580c;
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button::after {
+  transform: rotate(270deg); /* ➡️ cuando colapsado */
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(360deg); /* ⬇️ cuando expandido */
+}
+
+/* Estilo del cuerpo del acordeón */
+.accordion-body {
+  background-color: #fff7ed;
+  border-left: 3px solid #f97316;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #444;
+  border-radius: 0 0 8px 8px;
+}
+
+.sidebar .nav-link.subtema {
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  color: #495057;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .nav-link.subtema:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
 .menu-icon {
   font-size: 1.5rem;
   color: black;
   cursor: pointer;
   margin-right: 5 px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.menu-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.subtema {
+  font-size: 15px;
+  padding-left: 50px;
+}
+/* ---------------------- FIN SIDEBAR ---------------------- */
+
+/* ---------------------- OFFCANVAS ---------------------- */
 .offcanvas {
   transition: transform 0.2s ease-in-out;
   background-color: #fff;
@@ -82,9 +261,8 @@ body, html {
 }
 
 .offcanvas-below-navbar {
-  top: 98px !important; /* Ajusta este valor a la altura exacta de tu navbar */
-  height: calc(100% - 70px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  top: 109px !important;
+  height: calc(100% - 72px);
 }
 
 .offcanvas-backdrop {
@@ -95,7 +273,9 @@ body, html {
   font-size: 15px;
   padding-left: 50px;
 }
+/* ---------------------- FIN OFFCANVAS ---------------------- */
 
+<<<<<<< HEAD
 .navitem {
     font-weight: 700;
     font-size: 20px;
@@ -139,3 +319,29 @@ h1.fw-light {
     background-color: #5a6268;
     border-color: #5a6268;
 }
+=======
+/* ---------------------- BOTONES ---------------------- */
+button.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+/* ---------------------- FIN BOTONES ---------------------- */
+
+/* ---------------------- FOOTER ---------------------- */
+.footer {
+  background-color: #fdf5e6;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #fbe3c6;
+}
+/* ---------------------- FIN FOOTER ---------------------- */
+>>>>>>> 6f1298b (menú, navbar y subpagina 1 modificados asi re piola)
