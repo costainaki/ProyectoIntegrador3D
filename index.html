@@ -1,140 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <title>ZAxis</title>
+    <title>ZAxis</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  
-  <link rel='stylesheet' href='./css/style.css'>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
 
-  <script src='./js/main.js' defer></script>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg shadow px-4 py-2 banner">
-    <div class="container-fluid d-flex align-items-center justify-content-between" style="padding:0px">
-      <div class="logo-capsule d-flex align-items-center me-auto" style="margin-right: 200px;">
-        <i class="bi bi-list menu-icon me-3" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral"></i>
-        <a class="navbar-brand" href="index.html">
+    <link rel='stylesheet' href='./css/style.css'>
+
+    <script src='./js/main.js' defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg shadow px-4 py-2 banner">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+        style="padding:0px">
+        <div class="logo-capsule d-flex align-items-center me-auto"
+          style="margin: auto;">
+          <i class="bi bi-list menu-icon me-3" data-bs-toggle="offcanvas"
+            data-bs-target="#menuLateral" aria-controls="menuLateral"></i>
+          <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="Logo ZAxis">
-        </a>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between"
+          id="navbarSupportedContent">
+          <ul
+            class="navbar-nav mb-2 mb-lg-0 d-flex flex-row gap-4 ms-auto me-4">
+            <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="tutorial.html">Tutoriales</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="ejercicios.html">Ejercicios</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="certificados.html">Certificados</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="eventos.html">Calendario</a></li>
+          </ul>
+          <form class="d-flex position-relative" role="search">
+            <input class="form-control rounded-pill px-4 pe-5 shadow-sm"
+              type="search" placeholder="Buscar..." aria-label="Buscar">
+            <button
+              class="btn position-absolute end-0 me-2 top-50 translate-middle-y text-muted p-0 border-0 bg-transparent"
+              type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-row gap-4 ms-auto me-4">
-          <li class="nav-item"><a class="nav-link text-uppercase navitem" href="tutorial.html">Tutoriales</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase navitem" href="ejercicios.html">Ejercicios</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase navitem" href="certificados.html">Certificados</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase navitem" href="eventos.html">Calendario</a></li>
-        </ul>
-        <form class="d-flex position-relative" role="search">
-          <input class="form-control rounded-pill px-4 pe-5 shadow-sm" type="search" placeholder="Buscar..." aria-label="Buscar">
-          <button class="btn position-absolute end-0 me-2 top-50 translate-middle-y text-muted p-0 border-0 bg-transparent" type="submit">
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
     <!--/////////////COMIENZA CUERPO PRINCIPAL///////////////-->
 
     <div class="container mt-2">
-        <div class="row align-items-center">
-            <div class="col-md-6 d-flex flex-column align-items-center text-center">
-                <h1 class="fw-bold display-4 w800 titulo">ZAxis</h1>
-                <p class="lead mt-3 text-wrap w500">Aprende modelaje en 3D<br>de principiante a experto!</p>
-                <div class="d-grid gap-3 mt-4">
-                    <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Cursos autoasistidos</a>
-                    <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Videotutoriales</a>
-                    <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Foros de ayuda</a>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex flex-column align-items-center">
-                <img src="images/shapes.png" alt="shapes" class="img-fluid" style="max-height: 450px;">
-            </div>
+      <div class="row align-items-center">
+        <div class="col-md-6 d-flex flex-column align-items-center text-center">
+          <h1 class="fw-bold display-4 w800 titulo">ZAxis</h1>
+          <p class="lead mt-3 text-wrap w500">Aprende modelaje en 3D<br>de
+            principiante a experto!</p>
+          <div class="d-grid gap-3 mt-4">
+            <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Cursos
+              autoasistidos</a>
+            <a href="#"
+              class="btn btn-dark btn-lg rounded-pill fw-bold">Videotutoriales</a>
+            <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Foros
+              de ayuda</a>
+          </div>
         </div>
+        <div class="col-md-6 mt-4 d-flex flex-column align-items-center">
+          <img src="images/shapes.png" alt="shapes" class="img-fluid"
+            style="max-height: 450px;">
+        </div>
+      </div>
     </div>
 
     <!--/////////////TERMINA CUERPO PRINCIPAL///////////////-->
 
-  <div class="offcanvas offcanvas-start offcanvas-below-navbar" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="menuLateralLabel">Menú</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="accordion" id="accordionMenu">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clase1">
-              Clase 1: Tipos de diseño 3D
-            </button>
-          </h2>
-          <div id="clase1" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
-            <div class="accordion-body">
-              <a href="#" class="nav-link subtema">Subtema 1.1</a>
-              <a href="#" class="nav-link subtema">Subtema 1.2</a>
+    <div class="offcanvas offcanvas-start offcanvas-below-navbar" tabindex="-1"
+      id="menuLateral" aria-labelledby="menuLateralLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuLateralLabel">Temario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="accordion" id="accordionMenu">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#clase1">
+                Clase 1: Tipos de diseño 3D
+              </button>
+            </h2>
+            <div id="clase1" class="accordion-collapse collapse"
+              data-bs-parent="#accordionMenu">
+              <div class="accordion-body">
+                <a href="subpagina1.html" class="nav-link subtema">Subtema
+                  1.1</a>
+                <a href="#" class="nav-link subtema">Subtema 1.2</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clase2">
-              Clase 2: Mallas y Esqueletos
-            </button>
-          </h2>
-          <div id="clase2" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
-            <div class="accordion-body">
-              <a href="#" class="nav-link subtema">Subtema 2.1</a>
-              <a href="#" class="nav-link subtema">Subtema 2.2</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#clase2">
+                Clase 2: Mallas y Esqueletos
+              </button>
+            </h2>
+            <div id="clase2" class="accordion-collapse collapse"
+              data-bs-parent="#accordionMenu">
+              <div class="accordion-body">
+                <a href="#" class="nav-link subtema">Subtema 2.1</a>
+                <a href="#" class="nav-link subtema">Subtema 2.2</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clase3">
-              Clase 3: Texturas y Mapas UV
-            </button>
-          </h2>
-          <div id="clase3" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
-            <div class="accordion-body">
-              <a href="#" class="nav-link subtema">Subtema 3.1</a>
-              <a href="#" class="nav-link subtema">Subtema 3.2</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#clase3">
+                Clase 3: Texturas y Mapas UV
+              </button>
+            </h2>
+            <div id="clase3" class="accordion-collapse collapse"
+              data-bs-parent="#accordionMenu">
+              <div class="accordion-body">
+                <a href="#" class="nav-link subtema">Subtema 3.1</a>
+                <a href="#" class="nav-link subtema">Subtema 3.2</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clase4">
-              Clase 4: Animación 3D
-            </button>
-          </h2>
-          <div id="clase4" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
-            <div class="accordion-body">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#clase4">
+                Clase 4: Animación 3D
+              </button>
+            </h2>
+            <div id="clase4" class="accordion-collapse collapse"
+              data-bs-parent="#accordionMenu">
+              <div class="accordion-body">
                 <a href="#" class="nav-link subtema">Subtema 4.1</a>
                 <a href="#" class="nav-link subtema">Subtema 4.2</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  
-  <footer class="py-3 mt-5">
-    <p class="texto text-center">© Agostina Collado, Iñaki Costa, Fabrizio Rolón</p>
-  </footer>
+    <footer class="text-center py-3 mt-5 border-top">
+      <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa,
+        Fabrizio
+        Rolón</p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
