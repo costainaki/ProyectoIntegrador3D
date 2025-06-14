@@ -3,19 +3,12 @@
   --naranja: #ea7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
   --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
   --blanco: #f7f7f7;
+  --blanco2: #fafafa;
 }
 
 /* ESTILOS GENERALES */
 
 body, html {
-    display: grid;
-    font-family: "Open Sans", sans-serif; /* fuente no funca? elegir otra */
-    font-style: normal;
-    background-color: var(--blanco);
-    margin: 0;
-    padding: 0;
-body,
-html {
   display: flex;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
@@ -48,30 +41,19 @@ html {
   box-sizing: inherit;
 }
 
-.w100 {
-  font-weight: 100;
+.contact-info{
+    background-color: var(--blanco2);
+    box-shadow: 0px 2px 10px var(--naranja);
 }
-.w200 {
-  font-weight: 200;
-}
-.w300 {
-  font-weight: 300;
-}
-.w400 {
-  font-weight: 400;
-}
-.w500 {
-  font-weight: 500;
-}
-.w600 {
-  font-weight: 600;
-}
-.w700 {
-  font-weight: 700;
-}
-.w800 {
-  font-weight: 800;
-}
+
+.w100 {font-weight: 100;}
+.w200 {font-weight: 200;}
+.w300 {font-weight: 300;}
+.w400 {font-weight: 400;}
+.w500 {font-weight: 500;}
+.w600 {font-weight: 600;}
+.w700 {font-weight: 700;}
+.w800 {font-weight: 800;}
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
