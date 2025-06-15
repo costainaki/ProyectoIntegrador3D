@@ -24,30 +24,32 @@
     <script src='./js/main.js' defer></script>
   </head>
   <body>
-    <!--//////////NAVBAR//////////-->
-    <nav class="navbar navbar-expand-lg shadow px-4 py-2 banner">  
-      <div
-        class="container-fluid d-flex align-items-center justify-content-between"
-        style="padding:0px">
-        <div class="logo-capsule d-flex align-items-center me-auto"
-          style="margin: auto;">
-          <i class="bi bi-list menu-icon me-3" data-bs-toggle="offcanvas"
-            data-bs-target="#menuLateral" aria-controls="menuLateral"></i>
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo ZAxis">
-          </a>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg shadow px-3 py-2 fixed-top banner bg-orange">
+        <div
+          class="container-fluid position-relative d-flex justify-content-between align-items-center"
+          style="padding:0px">
+          <div class="logo-capsule d-flex align-items-center me-auto"
+            style="margin: auto;">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" alt="Logo ZAxis">
+            </a>
+          </div>
         </div>
         <div class="collapse navbar-collapse justify-content-between"
           id="navbarSupportedContent">
           <ul
             class="navbar-nav mb-2 mb-lg-0 d-flex flex-row gap-4 ms-auto me-4">
             <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="TutorialesTema1.html">Tutoriales</a></li>
                 href="subpagina1.html">Tutoriales</a></li>
             <li class="nav-item"><a class="nav-link text-uppercase navitem"
                 href="ejercicios.html">Ejercicios</a></li>
             <li class="nav-item"><a class="nav-link text-uppercase navitem"
                 href="Certificados.html">Certificados</a></li>
             <li class="nav-item"><a class="nav-link text-uppercase navitem"
+                href="eventos.html">Eventos</a></li>
                 href="eventos.html">Eventos</a></li>
           </ul>
           <form class="d-flex position-relative" role="search">
@@ -63,113 +65,76 @@
       </div>
     </nav>
     <!--//////////////FIN NAVBAR////////////-->
+        </div>
+      </nav>
+    </header>
 
-    <!--/////////////COMIENZA CUERPO PRINCIPAL///////////////-->
-
-    <div class="container mt-2">
-      <div class="row align-items-center">
-        <div class="col-md-6 d-flex flex-column align-items-center text-center">
-          <h1 class="fw-bold display-4 w800 titulo">ZAxis</h1>
-          <p class="lead mt-3 text-wrap w500">Aprende modelaje en 3D<br>de
-            principiante a experto!</p>
-          <div class="d-grid gap-3 mt-4">
-            <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Cursos
-              autoasistidos</a>
-            <a href="#"
-              class="btn btn-dark btn-lg rounded-pill fw-bold">Videotutoriales</a>
-            <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold">Foros
-              de ayuda</a>
+    <main class="container-fluid" style="margin-top: 80px;">
+      <div class="container mt-2">
+        <div class="row align-items-center">
+          <div
+            class="col-md-6 d-flex flex-column align-items-center text-center">
+            <h1 class="fw-bold display-4 w800 titulo">ZAxis</h1>
+            <p class="lead mt-3 text-wrap w500">Aprende modelaje en 3D<br>de
+              principiante a experto!</p>
+            <div class="d-grid gap-3 mt-4">
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Cursos
+                autoasistidos</a>
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Videotutoriales</a>
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Foros
+                de ayuda</a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 d-flex flex-column align-items-center">
+            <img src="images/shapes.png" alt="shapes" class="img-fluid"
+              style="max-height: 450px;">
           </div>
         </div>
-        <div class="col-md-6 mt-4 d-flex flex-column align-items-center">
-          <img src="images/shapes.png" alt="shapes" class="img-fluid"
-            style="max-height: 450px;">
-        </div>
       </div>
-    </div>
 
-    <!--/////////////TERMINA CUERPO PRINCIPAL///////////////-->
-
-    <!--//////////INICIO CONTENIDO SIDEBAR//////////-->
-    <div class="offcanvas offcanvas-start offcanvas-below-navbar" tabindex="-1"
-      id="menuLateral" aria-labelledby="menuLateralLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="menuLateralLabel">Temario</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-          aria-label="Cerrar"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="accordion" id="accordionMenu">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#clase1">
-                Clase 1: Tipos de diseño 3D
-              </button>
-            </h2>
-            <div id="clase1" class="accordion-collapse collapse"
-              data-bs-parent="#accordionMenu">
-              <div class="accordion-body">
-                <a href="subpagina1.html">Introducción al diseño 3D y sus
-                        diferentes tipos
-                        principales.</a>
+      <main class="container-fluid mt-5 pt-4">
+        <div class="row">
+          <aside class="sidebar-fixed d-none d-lg-block">
+            <div class="sidebar p-3">
+              <div class="sidebar-section">
+                <h6>Menú Principal</h6>
+                <a href="#" class="sidebar-link"><i class="bi bi-book"></i>
+                  Tutoriales</a>
+                <a href="#" class="sidebar-link"><i
+                    class="bi bi-pencil-square"></i> Ejercicios</a>
+                <a href="#" class="sidebar-link"><i
+                    class="bi bi-mortarboard"></i> Certificados</a>
+                <a href="#" class="sidebar-link"><i
+                    class="bi bi-calendar-date"></i> Calendario</a>
+              </div>
+              <div class="sidebar-section">
+                <h6>Clases</h6>
+                <a href="subpagina1.html" class="sidebar-link"><i
+                    class="bi bi-box"></i> Tipos
+                  de diseño 3D</a>
+                <a href="subpagina2.html" class="sidebar-link"><i
+                    class="bi bi-patch-check-fill"></i> Mallas y
+                  Esqueletos</a>
+                <a href="subpagina3.html" class="sidebar-link"><i
+                    class="bi bi-map"></i>
+                  Texturas y Mapas UV</a>
+                <a href="subpagina4.html" class="sidebar-link"><i
+                    class="bi bi-box"></i>
+                  Animación 3D</a>
               </div>
             </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#clase2">
-                Clase 2: Mallas y Esqueletos
-              </button>
-            </h2>
-            <div id="clase2" class="accordion-collapse collapse"
-              data-bs-parent="#accordionMenu">
-              <div class="accordion-body">
-                <a href="subpagina2.html">Conceptos y técnicas básicas de
-                      modelado poligonal.</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#clase3">
-                Clase 3: Texturas y Mapas UV
-              </button>
-            </h2>
-            <div id="clase3" class="accordion-collapse collapse"
-              data-bs-parent="#accordionMenu">
-              <div class="accordion-body">
-                <a href="subpagina3.html">Técnicas y ejemplos de modelado
-                      esculpido en 3D.</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#clase4">
-                Clase 4: Animación 3D
-              </button>
-            </h2>
-            <div id="clase4" class="accordion-collapse collapse"
-              data-bs-parent="#accordionMenu">
-              <div class="accordion-body">
-                <a href="subpagina4.html">Introducción al modelado
-                      paramétrico y su aplicación.</a>
-              </div>
-            </div>
-          </div>
+          </aside>
         </div>
       </div>
     </div>
     <!--//////////FIN CONTENIDO SIDEBAR//////////-->
 
     <!--//////////INICIO FOOTER//////////-->
+      </main>
+    </main>
     <footer class="text-center py-3 mt-5 border-top">
       <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa,
         Fabrizio

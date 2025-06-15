@@ -3,12 +3,10 @@
   --naranja: #ea7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
   --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
   --blanco: #f7f7f7;
-  --blanco2: #fafafa;
 }
 
-/* ESTILOS GENERALES */
-
-body, html {
+body,
+html {
   display: flex;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
@@ -41,19 +39,35 @@ body, html {
   box-sizing: inherit;
 }
 
-.contact-info{
-    background-color: var(--blanco2);
-    box-shadow: 0px 2px 10px var(--naranja);
+.contact-info {
+  background-color: var(--blanco2);
+  box-shadow: 0px 2px 10px var(--naranja);
 }
 
-.w100 {font-weight: 100;}
-.w200 {font-weight: 200;}
-.w300 {font-weight: 300;}
-.w400 {font-weight: 400;}
-.w500 {font-weight: 500;}
-.w600 {font-weight: 600;}
-.w700 {font-weight: 700;}
-.w800 {font-weight: 800;}
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+.w500 {
+  font-weight: 500;
+}
+.w600 {
+  font-weight: 600;
+}
+.w700 {
+  font-weight: 700;
+}
+.w800 {
+  font-weight: 800;
+}
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
@@ -64,6 +78,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  position: fixed;
   background-color: var(--naranja);
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -117,6 +132,7 @@ body, html {
 .navbar-brand img {
   height: 40px;
   width: auto;
+  margin-left: 15px;
 }
 
 .navbar form {
@@ -130,118 +146,63 @@ body, html {
 /* ---------------------- FIN NAVBAR ---------------------- */
 
 /*----------------- SIDEBAR ----------------------*/
+.offcanvas {
+  background-color: #1e1e1e;
+  color: #fff;
+  width: 230px;
+  margin: 0 !important;
+}
+
 .sidebar {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem;
+  margin: 0 !important;
+}
+
+.sidebar-fixed {
   position: fixed;
-  top: 55px; /* altura del menú*/
+  top: 57px; /* altura del navbar fijo */
   left: 0;
   width: 250px;
-  height: calc(100% - 72px);
-  background-color: white;
-  border-right: 1px solid #ddd;
-  padding: 1rem;
+  height: calc(100% - 57px);
   overflow-y: auto;
+  background-color: #1e1e1e;
   z-index: 1030;
 }
 
-.sidebar h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
+.sidebar-section {
   margin-bottom: 1rem;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
 }
 
-.sidebar .accordion-button {
-  background-color: transparent;
-  padding-left: 0;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  text-align: center;
+.sidebar-section h6 {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
-.sidebar .accordion-button:hover {
-  background-color: var(--naranja);
-  color: white;
-}
-
-.sidebar .accordion-item {
-  border: none;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar .accordion-subbody {
-  background-color: whitesmoke;
-}
-
-.accordion-button {
-  background-color: #f97316;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  margin-bottom: 8px;
+.sidebar-link {
   display: flex;
   align-items: center;
-}
-
-.accordion-button.collapsed {
-  background-color: #fb923c;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
   color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
-.accordion-button:hover {
-  background-color: #ea580c;
-  transform: translateX(4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.sidebar-link:hover {
+  color: #ea7600;
 }
 
-.accordion-button::after {
-  transform: rotate(270deg); /* ➡️ cuando colapsado */
-  transition: transform 0.3s ease;
-}
-
-.accordion-button:not(.collapsed)::after {
-  transform: rotate(360deg); /* ⬇️ cuando expandido */
-}
-
-/* Estilo del cuerpo del acordeón */
-.accordion-body {
-  background-color: #fff7ed;
-  border-left: 3px solid #f97316;
-  padding: 12px 16px;
-  font-size: 0.95rem;
-  color: #444;
-  border-radius: 0 0 8px 8px;
-}
-
-.sidebar .nav-link.subtema {
-  font-size: 0.95rem;
-  padding-left: 1.5rem;
-  color: #495057;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar .nav-link.subtema:hover {
-  color: #0d6efd;
-  text-decoration: underline;
-  transform: translateX(5px);
-}
-
-.menu-icon {
-  font-size: 1.5rem;
-  color: black;
-  cursor: pointer;
-  margin-right: 5 px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-icon:hover {
-  color: white;
-  transform: scale(1.2);
-}
-
-.subtema {
-  font-size: 15px;
-  padding-left: 50px;
+.sidebar-link i {
+  color: #ea7600;
+  font-size: 1.2rem;
 }
 /* ---------------------- FIN SIDEBAR ---------------------- */
 
@@ -252,7 +213,7 @@ body, html {
 }
 
 .offcanvas-start {
-  width: 280px !important;
+  width: 230px !important;
 }
 
 .offcanvas-below-navbar {
@@ -264,13 +225,11 @@ body, html {
   display: none !important;
 }
 
-
 .offcanvas-below-navbar {
-  top: 55px !important; 
-  height: calc(100% - 72px) !important;
+  top: 57px !important;
+  height: calc(100% - 57px) !important;
   z-index: 1050 !important; /* mayor que la navbar */
 }
-
 
 .subtema {
   font-size: 15px;
@@ -279,47 +238,47 @@ body, html {
 /* ---------------------- FIN OFFCANVAS ---------------------- */
 
 .navitem {
-    font-weight: 700;
-    font-size: 20px;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .py-5.text-center.container {
-    text-align: center;
-    color: var(--gris-oscuro);
+  text-align: center;
+  color: var(--gris-oscuro);
 }
 
 h1.fw-light {
-    font-size: 88px;
-    font-weight: 300;
-    margin-bottom: 1rem;
+  font-size: 88px;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 .lead.text-body-secondary {
-    font-size: 1.25rem;
-    color: #666666; /* gris suave */
-    margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #666666; /* gris suave */
+  margin-bottom: 2rem;
 }
 
 .btn-primary {
-    background-color: var(--naranja);
-    border-color: var(--naranja);
-    font-weight: 600;
+  background-color: var(--naranja);
+  border-color: var(--naranja);
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-    background-color: #d46700;
-    border-color: #d46700;
+  background-color: #d46700;
+  border-color: #d46700;
 }
 
 .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-    font-weight: 600;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
-    border-color: #5a6268;
+  background-color: #5a6268;
+  border-color: #5a6268;
 }
 /* ---------------------- BOTONES ---------------------- */
 button.btn {
