@@ -100,12 +100,11 @@ html {
 
 .navitem {
   font-weight: 700;
-  font-size: 20px;
   transition: color 0.3s ease;
 }
 
 .navitem:hover {
-  color: white;
+  color: var(--blanco);
 }
 
 .navbar-brand img {
@@ -175,6 +174,12 @@ html {
 .sidebar-link i {
   color: var(--naranja);
   font-size: 1.2rem;
+}
+
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-left: 0 !important; /* Saca margen cuando sidebar desaparece */
+  }
 }
 /* ---------------------- FIN SIDEBAR ---------------------- */
 
@@ -249,6 +254,15 @@ h1.fw-light {
   background-color: #5a6268;
   border-color: #5a6268;
 }
+
+@media (max-width: 768px) {
+  .col-md-6.text-center > .lead {
+    width: clamp(200px, 50%, 400px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* ---------------------- BOTONES ---------------------- */
 button.btn {
   transition: background-color 0.3s ease, transform 0.2s ease;
