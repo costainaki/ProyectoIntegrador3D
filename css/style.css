@@ -19,59 +19,34 @@ html {
   padding-top: 0px;
 }
 
-.main {
-  margin-left: 0px;
-  flex: 1;
-}
-
-.texto {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-}
-
-.titulo {
-  font-size: 64px;
-  transition: color 0.3s ease;
-}
-
-.titulo:hover {
-  color: var(--naranja);
-}
-
 .contenido {
   margin-right: 0 !important;
   box-sizing: inherit;
 }
 
 .contact-info {
-  background-color: var(--blanco2);
+  background-color: var(--blanco);
   box-shadow: 0px 2px 10px var(--naranja);
 }
 
-.w100 {
-  font-weight: 100;
-}
-.w200 {
-  font-weight: 200;
-}
-.w300 {
-  font-weight: 300;
-}
-.w400 {
-  font-weight: 400;
-}
-.w500 {
-  font-weight: 500;
-}
-.w600 {
-  font-weight: 600;
-}
-.w700 {
-  font-weight: 700;
-}
-.w800 {
-  font-weight: 800;
-}
+/* FUENTES */
+
+.w100 { font-weight: 100; }
+.w200 { font-weight: 200; }
+.w300 { font-weight: 300; }
+.w400 { font-weight: 400; }
+.w500 { font-weight: 500; }
+.w600 { font-weight: 600; }
+.w700 { font-weight: 700; }
+.w800 { font-weight: 800; }
+
+.fontsize-xl { font-size: clamp(3rem, 10vw, 6rem); }
+.fontsize-lg { font-size: clamp(1.5rem, 4vw, 3rem); }
+.fontsize-md { font-size: clamp(1.5rem, 4vw, 2rem); }
+.fontsize-sm { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+.fontsize-xs { font-size: clamp(0.875rem, 2vw, 1rem); }
+
+
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
@@ -150,16 +125,9 @@ html {
 /* ---------------------- FIN NAVBAR ---------------------- */
 
 /*----------------- SIDEBAR ----------------------*/
-.offcanvas {
-  background-color: #1e1e1e;
-  color: #fff;
-  width: 230px;
-  margin: 0 !important;
-}
-
 .sidebar {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
   padding: 1rem;
   margin: 0 !important;
 }
@@ -171,7 +139,7 @@ html {
   width: 250px;
   height: calc(100% - 57px);
   overflow-y: auto;
-  background-color: #1e1e1e;
+  background-color: var(--gris-oscuro);
   z-index: 1030;
 }
 
@@ -193,7 +161,7 @@ html {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  color: white;
+  color: var(--blanco);
   font-weight: 500;
   text-decoration: none;
   border-radius: 6px;
@@ -201,19 +169,22 @@ html {
 }
 
 .sidebar-link:hover {
-  color: #ea7600;
+  color: var(--naranja);
 }
 
 .sidebar-link i {
-  color: #ea7600;
+  color: var(--naranja);
   font-size: 1.2rem;
 }
 /* ---------------------- FIN SIDEBAR ---------------------- */
 
 /* ---------------------- OFFCANVAS ---------------------- */
 .offcanvas {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  width: 230px;
+  margin: 0 !important;
   transition: transform 0.2s ease-in-out;
-  background-color: #fff;
 }
 
 .offcanvas-start {
@@ -236,29 +207,23 @@ html {
 }
 
 .subtema {
-  font-size: 15px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   padding-left: 50px;
 }
 /* ---------------------- FIN OFFCANVAS ---------------------- */
-
-.navitem {
-  font-weight: 700;
-  font-size: 20px;
-}
-
 .py-5.text-center.container {
   text-align: center;
   color: var(--gris-oscuro);
 }
 
 h1.fw-light {
-  font-size: 88px;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
 .lead.text-body-secondary {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: #666666; /* gris suave */
   margin-bottom: 2rem;
 }
