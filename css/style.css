@@ -41,9 +41,11 @@ section.main-content {
   margin-left: 0 !important;
 }
 
-#layout-wrapper {
+.layout-wrapper {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: row;
+  min-height: 0;
 }
 /*----------------- MEDIA QUERIES ----------------------*/
 @media (min-width: 992px) {
@@ -73,17 +75,6 @@ section.main-content {
   }
 }
 
-@media (min-width: 992px) {
-  .main-content {
-    margin-left: 260px;
-  }
-}
-
-@media (min-width: 992px) {
-  #close-sidebar {
-    display: none;
-  }
-}
 /*----------------- FIN MEDIA QUERIES ----------------------*/
 #sidebar {
   position: fixed;
@@ -123,7 +114,6 @@ section.main-content {
 
 .main-content {
   flex: 1 1 auto;
-  height: 100vh;
   overflow-y: auto;
 }
 
@@ -149,25 +139,48 @@ section.main-content {
   box-shadow: 0px 2px 10px var(--naranja);
 }
 
-
-
 /* FUENTES */
 
-.w100 { font-weight: 100; }
-.w200 { font-weight: 200; }
-.w300 { font-weight: 300; }
-.w400 { font-weight: 400; }
-.w500 { font-weight: 500; }
-.w600 { font-weight: 600; }
-.w700 { font-weight: 700; }
-.w800 { font-weight: 800; }
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+.w500 {
+  font-weight: 500;
+}
+.w600 {
+  font-weight: 600;
+}
+.w700 {
+  font-weight: 700;
+}
+.w800 {
+  font-weight: 800;
+}
 
-.fontsize-xl { font-size: clamp(3rem, 10vw, 8rem); }
-.fontsize-lg { font-size: clamp(1.5rem, 4vw, 3rem); }
-.fontsize-md { font-size: clamp(1.5rem, 4vw, 2rem); }
-.fontsize-sm { font-size: clamp(1rem, 2.5vw, 1.25rem); }
-.fontsize-xs { font-size: clamp(0.875rem, 2vw, 1rem); }
-
+.fontsize-xl {
+  font-size: clamp(3rem, 10vw, 8rem);
+}
+.fontsize-lg {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+.fontsize-md {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+.fontsize-sm {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.fontsize-xs {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
 
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
@@ -221,27 +234,9 @@ section.main-content {
   display: block;
 }
 
-@media (min-width: 992px) {
-  #close-sidebar {
-    display: none;
-  }
-}
-
 /* Margen para contenido en escritorio para no taparlo */
 .main-content {
   margin-left: 0;
-}
-
-@media (min-width: 992px) {
-  .main-content {
-    margin-left: 260px;
-  }
-}
-
-@media (min-width: 992px) {
-  #close-sidebar {
-    display: none;
-  }
 }
 
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
@@ -369,9 +364,10 @@ button.btn:hover {
 
 /* ---------------------- FOOTER --------------------- */
 .footer {
+  margin-top: 0 !important;
   padding: 1px !important;
   text-align: center;
   color: #333;
-  transition: background-color 0.3s ease;
+  background-color: var(--blanco-fondo);
 }
 /* ---------------------- FIN FOOTER ---------------------- */
