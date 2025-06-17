@@ -114,7 +114,6 @@ html {
 
 .navitem {
   font-weight: 700;
-  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -208,6 +207,10 @@ html {
 
 /* ---------------------- OFFCANVAS ---------------------- */
 .offcanvas {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  width: 230px;
+  margin: 0 !important;
   transition: transform 0.2s ease-in-out;
   background-color: var(--blanco-fondo);
 }
@@ -232,7 +235,7 @@ html {
 }
 
 .subtema {
-  font-size: 15px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   padding-left: 50px;
 }
 
@@ -247,7 +250,7 @@ html {
 }
 
 h1.fw-light {
-  font-size: 88px;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
   font-weight: 300;
   margin-bottom: 1rem;
 }
