@@ -1,33 +1,80 @@
 /* ---------------------- ESTILOS GENERALES ---------------------- */
 :root {
-  --naranja: #ea7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
+  --naranja: #e67128; /* COLOR NARAJA USADO EN TODA LA PAGINA */
   --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
-  --blanco: #f7f7f7;
+  --blanco-fondo: #e7e9eb;
+  --blanco: #fff;
+  --texto-negro: black;
+  --texto-titulo-menu: gray;
+  --texto-hover: #ea7600;
+  --texto-gris-suave: #666666;
+  --texto-gris-oscuro: #5a6268;
 }
 
 body,
 html {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
   font-style: normal;
-  background-color: var(--blanco);
+  background-color: var(--blanco-fondo);
   background-image: url("../images/bgimage.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% auto;
-  padding-top: 0px;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 56px;
+}
+
+main,
+section.main-content {
+  flex: 1 0 auto;
+}
+
+.main {
+  margin-left: 0px;
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.main-content {
+  margin-left: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 260px;
+  }
+}
+
+.texto {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 64px;
+  transition: color 0.3s ease;
+}
+
+.titulo:hover {
+  color: var(--naranja);
 }
 
 .contenido {
-  margin-right: 0 !important;
+  margin-right: 0;
   box-sizing: inherit;
 }
 
 .contact-info {
-  background-color: var(--blanco);
+  background-color: var(--blanco-fondo);
   box-shadow: 0px 2px 10px var(--naranja);
 }
+
+
 
 /* FUENTES */
 
@@ -46,10 +93,16 @@ html {
 .fontsize-sm { font-size: clamp(1rem, 2.5vw, 1.25rem); }
 .fontsize-xs { font-size: clamp(0.875rem, 2vw, 1rem); }
 
+
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
-.banner {
+.img-unificada {
+  max-width: 200%; /* o el valor que prefieras */
+  height: auto;
+}
+
+#sidebar {
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -57,88 +110,93 @@ html {
   align-items: center;
   text-align: center;
   position: fixed;
-  background-color: var(--naranja);
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: black;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-.logo-capsule {
-  background-color: var(--blanco);
-  padding: 2px 3px;
-  border-radius: 0 99px 99px 0;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-.logo-capsule img {
-  height: 50px;
-  width: auto;
-  display: block;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: white;
+  overflow-y: auto;
   transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 1050;
 }
 
-.logo-capsule img:hover {
-  transform: scale(1.05);
+@media (min-width: 992px) {
+  #sidebar {
+    transform: none;
+    display: block !important;
+  }
+  #sidebar-backdrop {
+    display: none !important;
+  }
 }
 
-.navbar-nav .nav-item:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.3); /* o el color que combine */
-  padding-right: 5px;
-  margin-right: 5px;
+#sidebar.active {
+  transform: translateX(0);
+  z-index: 1050;
 }
 
-.navitem {
-  font-weight: 700;
-  transition: color 0.3s ease;
+#sidebar-backdrop {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1045;
+  display: none;
+  transition: opacity 0.3s ease;
 }
 
-.navitem:hover {
-  color: var(--blanco);
+#sidebar-backdrop.active {
+  display: block;
 }
 
-.navbar-brand img {
-  height: 40px;
-  width: auto;
-  margin-left: 15px;
+@media (min-width: 992px) {
+  #close-sidebar {
+    display: none;
+  }
 }
 
-.navbar form {
-  margin-right: 0 !important;
+/* Margen para contenido en escritorio para no taparlo */
+.main-content {
+  margin-left: 0;
 }
 
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 260px;
+  }
+}
+
+@media (min-width: 992px) {
+  #close-sidebar {
+    display: none;
+  }
+}
+
+/* ---------------------- FIN ESTILOS GENERALES ---------------------- */
+
+/* ---------------------- NAVBAR ---------------------- */
 .container-fluid {
   padding-left: 0 !important;
 }
 
+.navbar-orange {
+  background-color: #e67128;
+}
+.navbar img {
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ---------------------- FIN NAVBAR ---------------------- */
 
 /*----------------- SIDEBAR ----------------------*/
-.sidebar {
-  background-color: var(--gris-oscuro);
-  color: var(--blanco);
-  padding: 1rem;
-  margin: 0 !important;
-}
 
-.sidebar-fixed {
-  position: fixed;
-  top: 57px; /* altura del navbar fijo */
-  left: 0;
-  width: 250px;
-  height: calc(100% - 57px);
-  overflow-y: auto;
-  background-color: var(--gris-oscuro);
-  z-index: 1030;
+.sidebar {
+  background-color: var(--blanco-fondo);
+  color: var(--texto-titulo-menu);
+  padding: 1rem;
 }
 
 .sidebar-section {
@@ -149,77 +207,54 @@ html {
 
 .sidebar-section h6 {
   font-size: 0.75rem;
-  color: #999;
+  color: var(--texto-titulo-menu);
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 
 .sidebar-link {
-  display: flex;
+  display: block;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  color: var(--blanco);
+  padding: 8px 12px;
+  color: var(--texto-negro);
   font-weight: 500;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar-link:hover {
-  color: var(--naranja);
+  background-color: rgba(255, 255, 255, 0.2); /* fondo semitransparente */
+  color: var(--texto-hover);
+  transform: translateX(5px); /* pequeño movimiento */
 }
 
 .sidebar-link i {
-  color: var(--naranja);
+  color: var(--texto-hover);
   font-size: 1.2rem;
 }
 
-.main-content {
-  margin-left: 260px;
-  padding-top: 100px;
+.sidebar-section img {
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 991.98px) {
-  .main-content {
-    margin-left: 0 !important; /* Saca margen cuando sidebar desaparece */
-  }
+.sidebar-section img:hover {
+  transform: scale(1.05);
 }
+
 /* ---------------------- FIN SIDEBAR ---------------------- */
-
-/* ---------------------- OFFCANVAS ---------------------- */
-.offcanvas {
-  background-color: var(--gris-oscuro);
-  color: var(--blanco);
-  width: 230px;
-  margin: 0 !important;
-  transition: transform 0.2s ease-in-out;
-}
-
-.offcanvas-start {
-  width: 230px !important;
-}
-
-.offcanvas-below-navbar {
-  top: 109px !important;
-  height: calc(100% - 72px);
-}
-
-.offcanvas-backdrop {
-  display: none !important;
-}
-
-.offcanvas-below-navbar {
-  top: 57px !important;
-  height: calc(100% - 57px) !important;
-  z-index: 1050 !important; /* mayor que la navbar */
-}
 
 .subtema {
   font-size: clamp(1rem, 2vw, 1.25rem);
   padding-left: 50px;
 }
-/* ---------------------- FIN OFFCANVAS ---------------------- */
+
+.navitem {
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .py-5.text-center.container {
   text-align: center;
   color: var(--gris-oscuro);
@@ -232,8 +267,8 @@ h1.fw-light {
 }
 
 .lead.text-body-secondary {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  color: #666666; /* gris suave */
+  font-size: 1.25rem;
+  color: var(--texto-gris-suave); /* gris suave */
   margin-bottom: 2rem;
 }
 
@@ -244,28 +279,22 @@ h1.fw-light {
 }
 
 .btn-primary:hover {
-  background-color: #d46700;
-  border-color: #d46700;
+  background-color: var(--texto-hover);
+  border-color: var(--texto-hover);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--texto-gris-suave);
+  border-color: var(--texto-gris-suave);
   font-weight: 600;
 }
 
 .btn-secondary:hover {
-  background-color: #5a6268;
-  border-color: #5a6268;
+  background-color: var(--texto-gris-oscuro);
+  border-color: var(--texto-gris-oscuro);
 }
 
-@media (max-width: 768px) {
-  .col-md-6.text-center > .lead {
-    width: clamp(200px, 50%, 400px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+/* ---------------------- FIN OFFCANVAS ---------------------- */
 
 /* ---------------------- BOTONES ---------------------- */
 button.btn {
@@ -281,14 +310,13 @@ button.btn:hover {
 /* ---------------------- FOOTER --------------------- */
 .footer {
   background-color: #fdf5e6;
-  padding: 1rem;
+  padding: 1px !important;
   text-align: center;
   color: #333;
   transition: background-color 0.3s ease;
 }
 
 .footer:hover {
-  background-color: #fbe3c6;
+  background-color: var(--blanco-fondo);
 }
-/* HEAD */
 /* ---------------------- FIN FOOTER ---------------------- */

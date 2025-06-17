@@ -24,47 +24,53 @@
     <script src='./js/main.js' defer></script>
   </head>
   <body>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg shadow px-3 py-2 fixed-top banner bg-orange">
-        <div
-          class="container-fluid position-relative d-flex justify-content-between align-items-center"
-          style="padding:0px">
-          <div class="logo-capsule d-flex align-items-center me-auto"
-            style="margin: auto;">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="Logo ZAxis">
-            </a>
-          </div>
-        </div>
-        <div class="collapse navbar-collapse justify-content-between"
-          id="navbarSupportedContent">
-          <ul
-            class="navbar-nav mb-2 mb-lg-0 d-flex flex-row gap-4 ms-auto me-4">
-            <li class="nav-item"><a class="nav-link text-uppercase navitem fontsize-sm"
-                href="TutorialesTema1.html">Tutoriales</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase navitem fontsize-sm"
-                href="ejercicios.html">Ejercicios</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase navitem fontsize-sm"
-                href="Certificados.html">Certificados</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase navitem fontsize-sm"
-                href="eventos.html">Eventos</a></li>
-          </ul>
-          <form class="d-flex position-relative" role="search">
-            <input class="form-control rounded-pill px-4 pe-5 shadow-sm"
-              type="search" placeholder="Buscar..." aria-label="Buscar">
-            <button
-              class="btn position-absolute end-0 me-2 top-50 translate-middle-y text-muted p-0 border-0 bg-transparent"
-              type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-        </div>
-      </nav>
-    </header>
-    <!--//////////////FIN NAVBAR////////////-->
+    <nav
+      class="navbar navbar-orange d-lg-none fixed-top justify-content-between px-3">
+      <button class="btn text-white p-0" id="menu-toggle">
+        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      </button>
+      <img src="images/logo.png" alt="Logo" style="height: 30px;">
+    </nav>
 
-    <section class="main-content col-lg-10 px-4">
+    <aside class="sidebar-fixed d-none d-lg-none" id="sidebar">
+      <div class="sidebar p-3">
+        <div class="d-lg-none d-flex justify-content-end mb-2">
+          <button class="btn-close" aria-label="close-sidebar"
+            id="close-sidebar"></button>
+        </div>
+        <div class="sidebar-section text-center">
+          <img src="images/logo.png" class="mx-auto"
+            style="width: 150px; height: auto;">
+        </div>
+        <div class="sidebar-section">
+          <h6>Menú Principal</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-book"></i>
+            Tutoriales</a>
+          <a href="#" class="sidebar-link"><i
+              class="bi bi-pencil-square"></i> Ejercicios</a>
+          <a href="Certificados.html" class="sidebar-link"><i class="bi bi-mortarboard"></i>
+            Certificados</a>
+          <a href="Contacto.html" class="sidebar-link"><i
+              class="bi bi-calendar-date"></i> Contacto</a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Clases</h6>
+          <a href="#" class="sidebar-link"><i class="bi bi-box"></i> Tipos
+            de diseño 3D</a>
+          <a href="#" class="sidebar-link"><i
+              class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
+          <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
+            Texturas y Mapas UV</a>
+          <a href="#" class="sidebar-link"><i class="bi bi-box"></i>
+            Animación 3D</a>
+        </div>
+      </div>
+    </aside>
+
+    <div id="sidebar-backdrop" class="sidebar-backdrop d-none"></div>
+
+    <section class="main-content col-lg-10 px-4"
+      style="margin-left: 260px">
       <div class="container mt-2">
         <div class="row align-items-center justify-content-center g-0 position-relative">
           <div class="col-md-5 d-flex flex-column align-items-center text-center position-relative">
@@ -76,9 +82,14 @@
               de principiante a experto!
             </p>
             <div class="d-grid gap-3 mt-4">
-              <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold fontsize-sm">Cursos autoasistidos</a>
-              <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold fontsize-sm">Videotutoriales</a>
-              <a href="#" class="btn btn-dark btn-lg rounded-pill fw-bold fontsize-sm">Foros de ayuda</a>
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Cursos
+                autoasistidos</a>
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Videotutoriales</a>
+              <a href="#"
+                class="btn btn-dark btn-lg rounded-pill fw-bold">Foros
+                de ayuda</a>
             </div>
           </div>
           <div class="col-md-4 mt-4 d-none d-md-flex flex-column align-items-center">
@@ -86,41 +97,49 @@
           </div>
         </div>
       </div>
-
-      <div class="container-fluid mt-5 pt-4">
-        <div class="row">
-          <aside class="sidebar-fixed d-none d-lg-block">
-            <div class="sidebar p-3">
-              <div class="sidebar-section">
-                <h6>Menú Principal</h6>
-                <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-book"></i> Tutoriales</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-pencil-square"></i> Ejercicios</a>
-                <a href="Certificados.html" class="sidebar-link"><i class="bi bi-mortarboard"></i> Certificados</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-calendar-date"></i> Calendario</a>
-              </div>
-              <div class="sidebar-section">
-                <h6>Clases</h6>
-                <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-box"></i> Tipos de diseño 3D</a>
-                <a href="TutorialesTema2.html" class="sidebar-link"><i class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
-                <a href="TutorialesTema3.html" class="sidebar-link"><i class="bi bi-map"></i> Texturas y Mapas UV</a>
-                <a href="TutorialesTema4.html" class="sidebar-link"><i class="bi bi-box"></i> Animación 3D</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
     </section>
-    <!--//////////FIN CONTENIDO SIDEBAR//////////-->
-
-    <!--//////////INICIO FOOTER//////////-->
-    <footer class="text-center py-3 mt-5 border-top">
-      <p class="mb-0 text-muted fontsize-xs">© Agostina Collado, Iñaki Costa,
-        Fabrizio
-        Rolón</p>
+    <footer class="text-center py-3 mt-5 border-top  footer">
+      <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa,
+        Fabrizio Rolón</p>
     </footer>
-    <!--//////////INICIO FOOTER//////////-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', function () {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('d-none');
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+    
+      function toggleSidebar() {
+        const isActive = sidebar.classList.contains('active');
+        if (isActive) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      }
+    
+      function openSidebar() {
+        sidebar.classList.add('active');
+        backdrop.classList.add('active');
+      }
+    
+      function closeSidebar() {
+        sidebar.classList.remove('active');
+        backdrop.classList.remove('active');
+      }
+    
+      toggleBtn?.addEventListener('click', toggleSidebar);
+      closeBtn?.addEventListener('click', closeSidebar);
+      backdrop?.addEventListener('click', closeSidebar);
+    </script>
+
   </body>
 </html>
