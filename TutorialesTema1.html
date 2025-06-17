@@ -23,128 +23,52 @@
   </head>
 
   <body>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg shadow px-3 py-2 fixed-top banner bg-orange">
-        <div
-          class="container-fluid d-flex justify-content-between align-items-center">
-          <!-- Logo -->
-          <div class="logo-capsule d-flex align-items-center">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="Logo ZAxis" />
-            </a>
+    <nav
+      class="navbar navbar-orange d-lg-none fixed-top justify-content-between px-3">
+      <button class="btn text-black p-0" id="menu-toggle">
+        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      </button>
+      <img src="images/logo.png" alt="Logo" style="height: 30px;">
+    </nav>
+    <div class="layout-wrapper">
+      <aside class="sidebar-fixed" id="sidebar">
+        <div class="sidebar p-3">
+          <div class="d-lg-none d-flex justify-content-end mb-2">
+            <button class="btn-close" aria-label="close-sidebar"
+              id="close-sidebar"></button>
           </div>
-
-          <!-- Botón para móvil -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Contenido colapsable -->
-          <div class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent">
-            <!-- Buscador para pantallas pequeñas -->
-            <form class="d-lg-none d-block w-100 px-2" role="search">
-              <input
-                class="form-control rounded-pill shadow-sm w-100"
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Buscar" />
-              <button
-                class="btn position-absolute end-0 me-3 top-50 translate-middle-y text-muted p-0 border-0 bg-transparent"
-                type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
-
-            <!-- Buscador para escritorio -->
-            <form class="d-none d-lg-flex position-relative ms-4" role="search"
-              style="min-width: 250px; max-width: 350px; width: 100%;">
-              <input
-                class="form-control rounded-pill px-4 pe-5 shadow-sm w-100"
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Buscar" />
-              <button
-                class="btn position-absolute end-0 me-2 top-50 translate-middle-y text-muted p-0 border-0 bg-transparent"
-                type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
+          <div class="sidebar-section text-center">
+            <img src="images/logo.png" class="mx-auto"
+              style="width: 150px; height: auto;">
+          </div>
+          <div class="sidebar-section">
+            <h6>Menú Principal</h6>
+            <a href="TutorialesTema1.html" class="sidebar-link"><i
+                class="bi bi-book"></i>
+              Tutoriales</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-pencil-square"></i>
+              Ejercicios</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-mortarboard"></i>
+              Certificados</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-calendar-date"></i>
+              Calendario</a>
+          </div>
+          <div class="sidebar-section">
+            <h6>Clases</h6>
+            <a href="TutorialesTema1.html" class="sidebar-link"><i
+                class="bi bi-box"></i> Tipos de
+              diseño 3D</a>
+            <a href="#" class="sidebar-link"><i
+                class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-map"></i> Texturas
+              y
+              Mapas UV</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-box"></i> Animación
+              3D</a>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <main class="container-fluid mt-5 pt-4">
-      <!-- OFFCANVAS MOBILE MENU -->
-      <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1"
-        id="menuLateral" aria-labelledby="menuLateralLabel">
-        <div class="offcanvas-header border-bottom">
-          <h5 class="offcanvas-title" id="menuLateralLabel">Menú</h5>
-          <button type="button" class="btn-close btn-close-white"
-            data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="sidebar">
-            <div class="sidebar-section">
-              <h6>Menú Principal</h6>
-              <a href="#" class="sidebar-link"><i class="bi bi-book"></i>
-                Tutoriales</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-pencil-square"></i> Ejercicios</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-check-square"></i> Certificados</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-calendar-date"></i> Calendario</a>
-            </div>
-            <div class="sidebar-section">
-              <h6>Clases</h6>
-              <a href="TutorialesTema1.html" class="sidebar-link"><i
-                  class="bi bi-fire"></i> Clase 1: Tipos de diseño 3D</a>
-              <a href="TutorialesTema2.html" class="sidebar-link"><i
-                  class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
-              <a href="TutorialesTema3.html" class="sidebar-link"><i
-                  class="bi bi-tools"></i> Texturas y Mapas UV</a>
-              <a href="TutorialesTema4.html" class="sidebar-link"><i
-                  class="bi bi-box"></i> Animación 3D</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <aside class="sidebar-fixed d-none d-lg-block">
-          <div class="sidebar p-3">
-            <div class="sidebar-section">
-              <h6>Menú Principal</h6>
-              <a href="#" class="sidebar-link"><i class="bi bi-book"></i>
-                Tutoriales</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-pencil-square"></i> Ejercicios</a>
-              <a href="#" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-                Certificados</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-calendar-date"></i> Calendario</a>
-            </div>
-            <div class="sidebar-section">
-              <h6>Clases</h6>
-              <a href="#" class="sidebar-link"><i class="bi bi-box"></i> Tipos
-                de diseño 3D</a>
-              <a href="#" class="sidebar-link"><i
-                  class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
-              <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
-                Texturas y Mapas UV</a>
-              <a href="#" class="sidebar-link"><i class="bi bi-box"></i>
-                Animación 3D</a>
-            </div>
-          </div>
-        </aside>
-
+      </aside>
+      <div id="sidebar-backdrop"></div>
         <section class="main-content col-lg-9 px-4"
           style="margin-left: 260px;">
           <h1 class="mt-3">Tema 1: Tipos de diseño 3D</h1>
@@ -220,8 +144,7 @@
     </main>
 
     <footer class="text-center py-3 mt-5 border-top footer">
-      <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa, Fabrizio
-        Rolón</p>
+      <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa, Fabrizio Rolón</p>
     </footer>
 
     <script

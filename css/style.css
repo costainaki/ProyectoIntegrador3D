@@ -11,9 +11,14 @@
   --texto-gris-oscuro: #5a6268;
 }
 
-body,
-html {
+html,
+body {
   height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   font-style: normal;
@@ -23,7 +28,12 @@ html {
   background-position: top center;
   background-size: 100% auto;
   overflow-x: hidden;
-  padding-top: 50px;
+}
+
+body {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 main,
@@ -38,6 +48,10 @@ section.main-content {
 }
 
 .main-content {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+  padding-top: 47px; /* Si tienes navbar fija */
   margin-left: 0 !important;
 }
 
@@ -49,23 +63,26 @@ section.main-content {
 }
 /*----------------- MEDIA QUERIES ----------------------*/
 @media (min-width: 992px) {
-  .main-content {
-    margin-left: 260px !important;
-    top: 0 !important;
+  .layout-wrapper {
+    flex-direction: row;
   }
-}
-
-@media (min-width: 992px) {
   #sidebar {
-    transform: none !important; /* Siempre visible en escritorio */
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    height: 100%;
+    transform: none !important;
     display: block !important;
-    top: 0 !important; /* Alinea al top */
   }
   #sidebar.active {
-    transform: none !important; /* Ignora .active en escritorio */
+    transform: none !important;
   }
   #sidebar-backdrop {
     display: none !important;
+  }
+  .main-content {
+    margin-left: 260px !important;
+    padding-top: 0;
   }
 }
 
@@ -78,10 +95,10 @@ section.main-content {
 /*----------------- FIN MEDIA QUERIES ----------------------*/
 #sidebar {
   position: fixed;
-  top: 56px; /* Altura de la navbar */
+  top: 47px; /* Debajo de la navbar en móvil */
   left: 0;
   width: 260px;
-  height: calc(100vh - 56px); /* Resta la altura de la navbar */
+  height: calc(100vh - 47px); /* Solo el espacio debajo de la navbar */
   background-color: white;
   overflow-y: auto;
   transform: translateX(-100%);
@@ -96,10 +113,10 @@ section.main-content {
 
 #sidebar-backdrop {
   position: fixed;
-  top: 56px; /* o la altura de tu navbar */
+  top: 47px;
   left: 0;
   width: 100%;
-  height: calc(100% - 56px);
+  height: calc(100% - 47px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1045;
   opacity: 0;
@@ -182,63 +199,17 @@ section.main-content {
   font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
+.fontsize-xss {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
 .img-unificada {
-  max-width: 200%; /* o el valor que prefieras */
+  max-width: 200%;
   height: auto;
 }
-
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100vh;
-  background-color: white;
-  overflow-y: auto;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
-  z-index: 1050;
-}
-
-@media (min-width: 992px) {
-  #sidebar {
-    transform: none;
-    display: block !important;
-  }
-  #sidebar-backdrop {
-    display: none !important;
-  }
-}
-
-#sidebar.active {
-  transform: translateX(0);
-  z-index: 1050;
-}
-
-#sidebar-backdrop {
-  position: fixed;
-  top: 56px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 56px);
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1045;
-  display: none;
-  transition: opacity 0.3s ease;
-}
-
-#sidebar-backdrop.active {
-  display: block;
-}
-
-/* Margen para contenido en escritorio para no taparlo */
-.main-content {
-  margin-left: 0;
-}
-
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
 /* ---------------------- NAVBAR ---------------------- */
@@ -256,7 +227,6 @@ section.main-content {
 /* ---------------------- FIN NAVBAR ---------------------- */
 
 /*----------------- SIDEBAR ----------------------*/
-
 .sidebar {
   background-color: var(--blanco-fondo);
   color: var(--texto-titulo-menu);
@@ -307,6 +277,7 @@ section.main-content {
   transform: scale(1.05);
 }
 /*----------------- FIN SIDEBAR ----------------------*/
+
 .navitem {
   font-weight: 700;
   font-size: 20px;
