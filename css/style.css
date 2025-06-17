@@ -1,17 +1,25 @@
 /* ---------------------- ESTILOS GENERALES ---------------------- */
 :root {
-  --naranja: #ea7600; /* COLOR NARAJA USADO EN TODA LA PAGINA */
+  --naranja: #e67128; /* COLOR NARAJA USADO EN TODA LA PAGINA */
   --gris-oscuro: #1c1c1c; /* COLOR GRIS OSCURO USADO EN TODA LA PAGINA */
-  --blanco: #f7f7f7;
+  --blanco-fondo: #e7e9eb;
+  --blanco: #fff;
+  --texto-negro: black;
+  --texto-titulo-menu: gray;
+  --texto-hover: #ea7600;
+  --texto-gris-suave: #666666;
+  --texto-gris-oscuro: #5a6268;
 }
 
 body,
 html {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
   font-style: normal;
-  background-color: var(--blanco);
+  background-color: var(--blanco-fondo);
   background-image: url("../images/bgimage.png");
   background-repeat: no-repeat;
   background-position: top center;
@@ -22,6 +30,7 @@ html {
 .main {
   margin-left: 0px;
   flex: 1;
+  padding-left: 2rem;
 }
 
 .texto {
@@ -44,33 +53,13 @@ html {
 }
 
 .contact-info {
-  background-color: var(--blanco2);
+  background-color: var(--blanco-fondo);
   box-shadow: 0px 2px 10px var(--naranja);
 }
 
-.w100 {
-  font-weight: 100;
-}
-.w200 {
-  font-weight: 200;
-}
-.w300 {
-  font-weight: 300;
-}
-.w400 {
-  font-weight: 400;
-}
-.w500 {
-  font-weight: 500;
-}
-.w600 {
-  font-weight: 600;
-}
-.w700 {
-  font-weight: 700;
-}
-.w800 {
-  font-weight: 800;
+.img-unificada {
+  max-width: 200%; /* o el valor que prefieras */
+  height: auto;
 }
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
 
@@ -86,7 +75,7 @@ html {
   background-color: var(--naranja);
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: black;
+  color: var(--texto-negro);
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0 !important;
@@ -96,7 +85,7 @@ html {
 }
 
 .logo-capsule {
-  background-color: var(--blanco);
+  background-color: var(--blanco-fondo);
   padding: 2px 3px;
   border-radius: 0 99px 99px 0;
   display: flex;
@@ -130,7 +119,7 @@ html {
 }
 
 .navitem:hover {
-  color: white;
+  color: var(--blanco);
 }
 
 .navbar-brand img {
@@ -151,27 +140,24 @@ html {
 
 /*----------------- SIDEBAR ----------------------*/
 .offcanvas {
-  background-color: whitesmoke;
-  color: #fff;
+  background-color: var(--blanco-fondo);
   width: 230px;
   margin: 0 !important;
 }
 
 .sidebar {
-  background-color: whitesmoke;
-  color: gray;
+  background-color: var(--blanco-fondo);
+  color: var(--texto-titulo-menu);
   padding: 1rem;
   margin: 0 !important;
 }
 
 .sidebar-fixed {
   position: fixed;
-  top: 57px; /* altura del navbar fijo */
   left: 0;
   width: 250px;
-  height: calc(100% - 57px);
   overflow-y: auto;
-  background-color: whitesmoke;
+  background-color: var(--blanco-fondo);
   z-index: 1030;
 }
 
@@ -183,37 +169,47 @@ html {
 
 .sidebar-section h6 {
   font-size: 0.75rem;
-  color: #999;
+  color: var(--texto-titulo-menu);
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 
 .sidebar-link {
-  display: flex;
+  display: block;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  color: black;
+  padding: 8px 12px;
+  color: var(--texto-negro);
   font-weight: 500;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar-link:hover {
-  color: #ea7600;
+  background-color: rgba(255, 255, 255, 0.2); /* fondo semitransparente */
+  color: var(--texto-hover);
+  transform: translateX(5px); /* pequeño movimiento */
 }
 
 .sidebar-link i {
-  color: #ea7600;
+  color: var(--texto-hover);
   font-size: 1.2rem;
+}
+
+.sidebar-section img {
+  transition: transform 0.3s ease;
+}
+
+.sidebar-section img:hover {
+  transform: scale(1.05);
 }
 /* ---------------------- FIN SIDEBAR ---------------------- */
 
 /* ---------------------- OFFCANVAS ---------------------- */
 .offcanvas {
   transition: transform 0.2s ease-in-out;
-  background-color: #fff;
+  background-color: var(--blanco-fondo);
 }
 
 .offcanvas-start {
@@ -239,7 +235,6 @@ html {
   font-size: 15px;
   padding-left: 50px;
 }
-/* ---------------------- FIN OFFCANVAS ---------------------- */
 
 .navitem {
   font-weight: 700;
@@ -259,7 +254,7 @@ h1.fw-light {
 
 .lead.text-body-secondary {
   font-size: 1.25rem;
-  color: #666666; /* gris suave */
+  color: var(--texto-gris-suave); /* gris suave */
   margin-bottom: 2rem;
 }
 
@@ -270,20 +265,23 @@ h1.fw-light {
 }
 
 .btn-primary:hover {
-  background-color: #d46700;
-  border-color: #d46700;
+  background-color: var(--texto-hover);
+  border-color: var(--texto-hover);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--texto-gris-suave);
+  border-color: var(--texto-gris-suave);
   font-weight: 600;
 }
 
 .btn-secondary:hover {
-  background-color: #5a6268;
-  border-color: #5a6268;
+  background-color: var(--texto-gris-oscuro);
+  border-color: var(--texto-gris-oscuro);
 }
+
+/* ---------------------- FIN OFFCANVAS ---------------------- */
+
 /* ---------------------- BOTONES ---------------------- */
 button.btn {
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -298,7 +296,7 @@ button.btn:hover {
 /* ---------------------- FOOTER --------------------- */
 .footer {
   background-color: #fdf5e6;
-  padding: 1rem;
+  padding: 1px !important;
   text-align: center;
   color: #333;
   transition: background-color 0.3s ease;
@@ -307,5 +305,4 @@ button.btn:hover {
 .footer:hover {
   background-color: #fbe3c6;
 }
-/* HEAD */
 /* ---------------------- FIN FOOTER ---------------------- */
