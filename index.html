@@ -25,62 +25,60 @@
   </head>
   <body>
     <nav
-      class="navbar-orange d-lg-none fixed-top justify-content-between px-3">
-      <button class="btn text-black p-0 menu-btn d-none d-lg-block"
-        id="menu-toggle-desktop">
-        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
       </button>
-      <a href="index.html" class="navbar-brand">
-        <img src="images/logo.png" alt="Logo" style="height: 30px;">
+      <a href="index.html" class="navbar-brand m-0 px-2">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
       </a>
     </nav>
-    <button class="btn text-black p-0 menu-btn" id="menu-toggle">
-      <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+    <button class="btn text-black p-0 menu-btn menu-toggle">
+      <i class="bi bi-list" style="font-size: 1.3rem;"></i>
     </button>
     <div class="layout-wrapper">
-      <aside class="sidebar-fixed" id="sidebar">
-        <div class="sidebar p-3">
-          <div class="d-lg-none d-flex justify-content-end mb-2">
-            <button class="btn-close" aria-label="close-sidebar"
-              id="close-sidebar"></button>
-          </div>
-          <div class="sidebar-section text-center">
-            <img src="images/logo.png" class="mx-auto"
-              style="width: 150px; height: auto;">
-          </div>
-          <div class="sidebar-section">
-            <h6>Menú Principal</h6>
-            <a href="TutorialesTema1.html" class="sidebar-link"><i
-                class="bi bi-book"></i>
-              Tutoriales</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-pencil-square"></i>
-              Ejercicios</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-              Certificados</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-calendar-date"></i>
-              Calendario</a>
-          </div>
-          <div class="sidebar-section">
-            <h6>Clases</h6>
-            <a href="TutorialesTema1.html" class="sidebar-link"><i
-                class="bi bi-box-fill"></i> Tipos de
-              diseño 3D</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-noise-reduction"></i> Mallas y Esqueletos</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
-              Texturas
-              y
-              Mapas UV</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-clock-fill"></i>
-              Animación
-              3D</a>
-          </div>
+      <aside class="sidebar p-3" id="sidebar">
+        <div class="d-lg-none d-flex justify-content-end mb-2">
+          <button class="btn-close" aria-label="close-sidebar"
+            id="close-sidebar"></button>
+        </div>
+        <div class="sidebar-section text-center">
+          <img src="images/logo.png" class="mx-auto"
+            style="width: 150px; height: auto;">
+        </div>
+        <div class="sidebar-section">
+          <h6>Menú Principal</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-book"></i>
+            Tutoriales</a>
+          <a href="Ejercicios.html" class="sidebar-link"><i
+              class="bi bi-pencil-square"></i>
+            Ejercicios</a>
+          <a href="Certificados.html" class="sidebar-link"><i
+              class="bi bi-mortarboard"></i>
+            Certificados</a>
+          <a href="Eventos.html" class="sidebar-link"><i
+              class="bi bi-calendar-date"></i>
+            Calendario</a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Clases</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-box-fill"></i> Tipos de
+            diseño 3D</a>
+          <a href="#" class="sidebar-link"><i
+              class="bi bi-noise-reduction"></i> Mallas y Esqueletos</a>
+          <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
+            Texturas
+            y
+            Mapas UV</a>
+          <a href="#" class="sidebar-link"><i class="bi bi-clock-fill"></i>
+            Animación
+            3D</a>
         </div>
       </aside>
       <div id="sidebar-backdrop"></div>
-      <section class="main-content col-lg-9 px-4">
+      <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0">
         <div class="container mt-2">
           <div class="row align-items-center justify-content-center g-0">
             <div
@@ -88,7 +86,6 @@
               <h1 class="fw-bold display-4 w800 fontsize-xl">ZAxis</h1>
               <p class="lead mt-3 text-wrap w500 fontsize-md">
                 Aprende modelaje en 3D
-                <!--<span class="d-inline d-md-none"><br></span>-->
                 <span class="d-none d-xl-inline"><br></span>
                 de principiante a experto!
               </p>
@@ -122,26 +119,7 @@
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const toggleBtn = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const closeBtn = document.getElementById('close-sidebar');
-        const backdrop = document.getElementById('sidebar-backdrop');
-      
-        function toggleSidebar() {
-          sidebar.classList.toggle('active');
-          backdrop.classList.toggle('active');
-        }
-      
-        function closeSidebar() {
-          sidebar.classList.remove('active');
-          backdrop.classList.remove('active');
-        }
-      
-        toggleBtn?.addEventListener('click', toggleSidebar);
-        closeBtn?.addEventListener('click', closeSidebar);
-        backdrop?.addEventListener('click', closeSidebar);
-      </script>
+    <script src="js/menu.js"></script>
 
   </body>
 </html>

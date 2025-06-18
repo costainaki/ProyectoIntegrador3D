@@ -25,58 +25,64 @@
   </head>
   <body>
     <nav
-      class="navbar-orange d-lg-none fixed-top justify-content-between px-3">
-      <button class="btn text-black p-0" id="menu-toggle">
-        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
       </button>
-      <a href="index.html" class="navbar-brand">
-        <img src="images/logo.png" alt="Logo" style="height: 30px;">
+      <a href="index.html" class="navbar-brand m-0 px-2">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
       </a>
     </nav>
+    <button class="btn text-black p-0 menu-btn menu-toggle">
+      <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+    </button>
     <div class="layout-wrapper">
-      <aside class="sidebar-fixed" id="sidebar">
-        <div class="sidebar p-3">
-          <div class="d-lg-none d-flex justify-content-end mb-2">
-            <button class="btn-close" aria-label="close-sidebar"
-              id="close-sidebar"></button>
-          </div>
-          <div class="sidebar-section text-center">
+      <aside class="sidebar p-3" id="sidebar">
+        <div class="d-lg-none d-flex justify-content-end mb-2">
+          <button class="btn-close" aria-label="close-sidebar"
+            id="close-sidebar"></button>
+        </div>
+        <div class="sidebar-section text-center">
+          <a href="index.html" class="navbar-brand m-0 px-2">
             <img src="images/logo.png" class="mx-auto"
               style="width: 150px; height: auto;">
-          </div>
-          <div class="sidebar-section">
-            <h6>Menú Principal</h6>
-            <a href="TutorialesTema1.html" class="sidebar-link"><i
-                class="bi bi-book"></i>
-              Tutoriales</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-pencil-square"></i>
-              Ejercicios</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-              Certificados</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-calendar-date"></i>
-              Calendario</a>
-          </div>
-          <div class="sidebar-section">
-            <h6>Clases</h6>
-            <a href="TutorialesTema1.html" class="sidebar-link"><i
-                class="bi bi-box-fill"></i> Tipos de
-              diseño 3D</a>
-            <a href="#" class="sidebar-link"><i
-                class="bi bi-noise-reduction"></i> Mallas y Esqueletos</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
-              Texturas
-              y
-              Mapas UV</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-clock-fill"></i>
-              Animación
-              3D</a>
-          </div>
+          </a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Menú Principal</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-book"></i>
+            Tutoriales</a>
+          <a href="Ejercicios.html" class="sidebar-link"><i
+              class="bi bi-pencil-square"></i>
+            Ejercicios</a>
+          <a href="Certificados.html" class="sidebar-link"><i
+              class="bi bi-mortarboard"></i>
+            Certificados</a>
+          <a href="Eventos.html" class="sidebar-link"><i
+              class="bi bi-calendar-date"></i>
+            Calendario</a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Clases</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-box-fill"></i> Tipos de
+            diseño 3D</a>
+          <a href="TutorialesTema2.html" class="sidebar-link"><i
+              class="bi bi-noise-reduction"></i> Mallas y Esqueletos</a>
+          <a href="TutorialesTema3.html" class="sidebar-link"><i
+              class="bi bi-map"></i>
+            Texturas
+            y
+            Mapas UV</a>
+          <a href="TutorialesTema4.html" class="sidebar-link"><i
+              class="bi bi-clock-fill"></i>
+            Animación
+            3D</a>
         </div>
       </aside>
       <div id="sidebar-backdrop"></div>
-      <section class="main-content col-lg-9 px-4">
+      <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0">
         <div class="container mt-2">
           <div class="row align-items-center justify-content-center g-0">
             <h1 class="mt-3">Tema 1: Tipos de diseño 3D</h1>
@@ -97,42 +103,47 @@
               de cómputo, el diseño 3D se expandió a campos como cine,
               videojuegos, arquitectura e ingeniería.
             </p>
-
+            <hr>
             <p>Con esto en mente se pueden definir 3 tipos principales de
               diseño
               3D:</p>
             <ul>
               <li class="mb-4 align-items-center">
-                <strong>Poligonal:</strong> Este es el estilo más popular.
-                Usa
-                polígonos (caras, vértices, aristas) y se aplica en
-                videojuegos,
-                cine, animación, realidad virtual, etc.
+                <strong>Poligonal:</strong> Este es el estilo de diseño más
+                popular. Se usa para crear modelos usando polígonos (tienen sus
+                caras, vértices, arístas, etc) y su uso se expande en campos
+                como los videojuegos, cine, animación, realidad virtual, etc.
                 <img src="images/hiphopdance.gif"
                   alt="Ejemplo de modelo poligonal"
                   class="img-fluid img-unificada mt-2 rounded shadow-sm"
                   loading="lazy" />
               </li>
+              <hr>
               <li class="mb-4 align-items-center">
-                <strong>Esculpido:</strong> Similar al modelado con arcilla
-                digital, permite crear formas muy detalladas. Se usa para
-                personajes realistas, criaturas y arte conceptual.
+                <strong>Esculpido:</strong> Es un tipo de diseño que se basa en
+                ir deformando el modelo como si fuera arcilla digital. Es una
+                técnica que da resultados mucho más detallados, pero es
+                significativamente más complicado de llevar a cabo. Se usa
+                principalmente para hacer personajes detallados, criaturas
+                fantásticas y arte conceptual
                 <img src="images/sculptingmodelling.jpg"
                   alt="Modelo 3D esculpido"
                   class="img-fluid img-unificada mt-2 rounded shadow-sm"
                   loading="lazy" />
               </li>
+              <hr>
               <li class="mb-4 align-items-center">
-                <strong>Paramétrico:</strong> Usa reglas y parámetros.
-                Fundamental
-                en ingeniería, arquitectura y diseño industrial.
+                <strong>Paramétrico:</strong> Usa parámetros aritméticosy
+                operaciones
+                lógicas, imprescindible para la industria de la ingeniería,
+                arquitectura y el diseño industrial.
                 <img src="images/aritmetic.gif"
                   alt="Diseño paramétrico en 3D"
                   class="img-fluid img-unificada mt-2 rounded shadow-sm "
                   loading="lazy" />
               </li>
             </ul>
-
+            <hr>
             <p>
               En este curso vamos a ahondar principalmente en el
               <strong>diseño
@@ -148,7 +159,7 @@
                 class="btn btn-primary"
                 title="Volver al menú principal">🏠 Menú Principal</button>
               <button id="btnSiguiente"
-                onclick="window.location.href='TutorialesTema1.html';"
+                onclick="window.location.href='TutorialesTema2.html';"
                 class="btn btn-outline-secondary"
                 title="Ir al siguiente tema">Siguiente →</button>
             </div>
@@ -166,5 +177,6 @@
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
