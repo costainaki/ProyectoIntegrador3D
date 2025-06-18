@@ -71,24 +71,75 @@ section.main-content {
     top: 0 !important;
     left: 0;
     height: 100%;
-    transform: none !important;
-    display: block !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
   }
+
   #sidebar.active {
-    transform: none !important;
+    transform: translateX(0);
   }
+
   #sidebar-backdrop {
     display: none !important;
   }
+
+  #sidebar-backdrop {
+    display: none !important;
+  }
+
+  #close-sidebar {
+    display: none;
+  }
+
   .main-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     margin-left: 260px !important;
-    padding-top: 0;
+  }
+
+  .main-content.sidebar-open {
+    margin-left: 260px !important;
   }
 }
 
-@media (min-width: 992px) {
-  #close-sidebar {
-    display: none;
+@media (max-width: 992px) {
+  .col-md-4.mt-4.d-none.d-md-flex {
+    display: none !important; /* Oculta la imagen lateral en móvil */
+  }
+  .main-content .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-content h1 {
+    font-size: 2.2rem !important;
+  }
+  .main-content .lead {
+    font-size: 1.1rem !important;
+  }
+  .main-content .btn {
+    font-size: 1rem !important;
+    padding: 0.75rem 1.25rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #sidebar {
+    width: 90vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .sidebar-section img {
+    width: 100px !important;
+  }
+  .main-content h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main-content li {
+    text-align: center;
   }
 }
 
@@ -132,6 +183,14 @@ section.main-content {
 .main-content {
   flex: 1 1 auto;
   overflow-y: auto;
+}
+
+.main-content li img,
+.main-content p img {
+  display: block;
+  margin: 1rem auto 0 auto;
+  max-width: 450px;
+  height: auto;
 }
 
 .texto {
@@ -207,7 +266,7 @@ section.main-content {
 
 /* ---------------------- NAVBAR ---------------------- */
 .img-unificada {
-  max-width: 200%;
+  max-width: 250px;
   height: auto;
 }
 /* ---------------------- FIN ESTILOS GENERALES ---------------------- */
@@ -305,6 +364,11 @@ button.btn {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+button.btn-gris {
+  background-color: var(--texto-gris-suave);
+  color: var;
+}
+
 button.btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
@@ -331,6 +395,14 @@ button.btn:hover {
   background-color: var(--texto-gris-oscuro);
   border-color: var(--texto-gris-oscuro);
 }
+
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}
+
 /* ---------------------- FIN BOTONES ---------------------- */
 
 /* ---------------------- FOOTER --------------------- */

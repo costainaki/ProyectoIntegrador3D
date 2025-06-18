@@ -26,11 +26,17 @@
   <body>
     <nav
       class="navbar-orange d-lg-none fixed-top justify-content-between px-3">
-      <button class="btn text-black p-0" id="menu-toggle">
+      <button class="btn text-black p-0 menu-btn d-none d-lg-block"
+        id="menu-toggle-desktop">
         <i class="bi bi-list" style="font-size: 1.5rem;"></i>
       </button>
-      <img src="images/logo.png" alt="Logo" style="height: 30px;">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo.png" alt="Logo" style="height: 30px;">
+      </a>
     </nav>
+    <button class="btn text-black p-0 menu-btn" id="menu-toggle">
+      <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+    </button>
     <div class="layout-wrapper">
       <aside class="sidebar-fixed" id="sidebar">
         <div class="sidebar p-3">
@@ -47,24 +53,28 @@
             <a href="TutorialesTema1.html" class="sidebar-link"><i
                 class="bi bi-book"></i>
               Tutoriales</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-pencil-square"></i>
+            <a href="#" class="sidebar-link"><i
+                class="bi bi-pencil-square"></i>
               Ejercicios</a>
             <a href="#" class="sidebar-link"><i class="bi bi-mortarboard"></i>
               Certificados</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-calendar-date"></i>
+            <a href="#" class="sidebar-link"><i
+                class="bi bi-calendar-date"></i>
               Calendario</a>
           </div>
           <div class="sidebar-section">
             <h6>Clases</h6>
             <a href="TutorialesTema1.html" class="sidebar-link"><i
-                class="bi bi-box"></i> Tipos de
+                class="bi bi-box-fill"></i> Tipos de
               diseño 3D</a>
             <a href="#" class="sidebar-link"><i
-                class="bi bi-patch-check-fill"></i> Mallas y Esqueletos</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-map"></i> Texturas
+                class="bi bi-noise-reduction"></i> Mallas y Esqueletos</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-map"></i>
+              Texturas
               y
               Mapas UV</a>
-            <a href="#" class="sidebar-link"><i class="bi bi-box"></i> Animación
+            <a href="#" class="sidebar-link"><i class="bi bi-clock-fill"></i>
+              Animación
               3D</a>
           </div>
         </div>
@@ -89,7 +99,8 @@
                 <a
                   href="https://www.youtube.com/watch?v=1Alu4jMKMG8&list=PLjEaoINr3zgEt_DatH4t_A3u1PpLkK4Lm&pp=0gcJCWMEOCosWNin"
                   class="btn btn-dark btn-lg rounded-pill fw-bold fontsize-sm"
-                  target="_blank" rel="noopener noreferrer">Videotutoriales</a>
+                  target="_blank"
+                  rel="noopener noreferrer">Videotutoriales</a>
                 <a href="#"
                   class="btn btn-dark btn-lg rounded-pill fw-bold fontsize-sm">Foros
                   de ayuda</a>
