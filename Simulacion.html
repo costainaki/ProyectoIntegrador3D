@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modelo 3D rig con huesos por encima</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      display: block;
+    }
+
+    .controls {
+  position: fixed !important; /* Importante el !important para que sobrescriba */
+  top: 60px !important;       /* Lo colocas debajo del navbar fijo */
+  left: 1rem !important;
+  z-index: 9999 !important;
+  width: 400px;
+  max-height: calc(100vh - 70px) !important; /* Altura visible */
+  overflow-y: auto !important;
+  background: rgba(0,0,0,0.7) !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+  color: white !important;
+  display: grid !important;
+  grid-template-columns: max-content 1fr !important;
+  gap: 0.5rem 1rem !important;
+}
+
+
+
+    label { white-space: nowrap; }
+    .controls button {
+      grid-column: 1 / span 2;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background: #44aa88;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .controls button:hover {
+      background: #339977;
+    }
+  </style>
+  </head>
+  <body>
+    <nav
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+      </button>
+      <a href="index.html"
+        class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
+      </a>
+    </nav>
+
+    <div class="controls">
+      <!-- Controles -->
+      <label>Hombro Izquierdo:</label><input id="shoulderL" type="range"
+        min="-180" max="180" value="0">
+      <label>Codo Izquierdo:</label><input id="elbowL" type="range" min="-135"
+        max="135" value="0">
+      <label>Muñeca Izquierda:</label><input id="wristL" type="range" min="-90"
+        max="90" value="0">
+
+      <label>Hombro Derecho:</label><input id="shoulderR" type="range"
+        min="-180" max="180" value="0">
+      <label>Codo Derecho:</label><input id="elbowR" type="range" min="0"
+        max="135" value="0">
+      <label>Muñeca Derecha:</label><input id="wristR" type="range" min="-90"
+        max="90" value="0">
+
+      <label>Cadera Izquierda:</label><input id="hipL" type="range" min="-90"
+        max="90" value="0">
+      <label>Rodilla Izquierda:</label><input id="kneeL" type="range" min="0"
+        max="135" value="0">
+      <label>Tobillo Izquierdo:</label><input id="ankleL" type="range" min="-45"
+        max="45" value="0">
+
+      <label>Cadera Derecha:</label><input id="hipR" type="range" min="-90"
+        max="90" value="0">
+      <label>Rodilla Derecha:</label><input id="kneeR" type="range" min="0"
+        max="135" value="0">
+      <label>Tobillo Derecho:</label><input id="ankleR" type="range" min="-45"
+        max="45" value="0">
+
+      <button id="goIndex">Volver a index.html</button>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js"></script>
+    <script>
+    // Escena y cámara
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x222222);
+    const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
+    camera.position.set(0, 2, 7);
+    camera.lookAt(0,1,0);
+
+    // Renderer
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000, 0); // color transparente
+    document.body.appendChild(renderer.domElement);
+
+    // Luces
+    scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+    const light = new THREE.DirectionalLight(0xffffff, 1); light.position.set(5,5,5); scene.add(light);
+
+    // Torso
+    const torsoMaterial = new THREE.MeshStandardMaterial({color:0x336633});
+    const torso = new THREE.Mesh(new THREE.BoxGeometry(1.2,2,0.6), torsoMaterial); torso.position.y=1;
+    scene.add(torso); torso.renderOrder=0;
+
+    const boneMaterial = new THREE.MeshStandardMaterial({color:0x44aa88});
+    function makeSegment(length) {
+      const mesh = new THREE.Mesh(new THREE.BoxGeometry(0.3, length, 0.3), boneMaterial);
+      mesh.geometry.translate(0, -length/2, 0); mesh.renderOrder=1; return mesh;
+    }
+
+    // Brazo Izq
+    const shoulderL = new THREE.Object3D(); shoulderL.position.set(-0.75,1,0); torso.add(shoulderL);
+    const upperArmL = makeSegment(0.7); shoulderL.add(upperArmL);
+    const elbowL = new THREE.Object3D(); elbowL.position.set(0,-0.7,0); upperArmL.add(elbowL);
+    const forearmL = makeSegment(0.6); elbowL.add(forearmL);
+    const wristL = new THREE.Object3D(); wristL.position.set(0,-0.6,0); forearmL.add(wristL); wristL.add(makeSegment(0.3));
+
+    // Brazo Der
+    const shoulderR = new THREE.Object3D(); shoulderR.position.set(0.75,1,0); torso.add(shoulderR);
+    const upperArmR = makeSegment(0.7); shoulderR.add(upperArmR);
+    const elbowR = new THREE.Object3D(); elbowR.position.set(0,-0.7,0); upperArmR.add(elbowR);
+    const forearmR = makeSegment(0.6); elbowR.add(forearmR);
+    const wristR = new THREE.Object3D(); wristR.position.set(0,-0.6,0); forearmR.add(wristR); wristR.add(makeSegment(0.3));
+
+    // Pierna Izq
+    const hipL = new THREE.Object3D(); hipL.position.set(-0.5,-1,0); torso.add(hipL);
+    const thighL = makeSegment(0.9); hipL.add(thighL); const kneeL = new THREE.Object3D(); kneeL.position.set(0,-0.9,0); thighL.add(kneeL);
+    const shinL = makeSegment(0.8); kneeL.add(shinL); const ankleL = new THREE.Object3D(); ankleL.position.set(0,-0.8,0); shinL.add(ankleL); ankleL.add(makeSegment(0.3));
+    // Pierna Der
+    const hipR = new THREE.Object3D(); hipR.position.set(0.5,-1,0); torso.add(hipR);
+    const thighR = makeSegment(0.9); hipR.add(thighR); const kneeR = new THREE.Object3D(); kneeR.position.set(0,-0.9,0); thighR.add(kneeR);
+    const shinR = makeSegment(0.8); kneeR.add(shinR); const ankleR = new THREE.Object3D(); ankleR.position.set(0,-0.8,0); shinR.add(ankleR); ankleR.add(makeSegment(0.3));
+
+    // Eventos sliders
+    document.getElementById('shoulderL').oninput=e=>shoulderL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('elbowL').oninput=e=>elbowL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('wristL').oninput=e=>wristL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('shoulderR').oninput=e=>shoulderR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('elbowR').oninput=e=>elbowR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('wristR').oninput=e=>wristR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('hipL').oninput=e=>hipL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('kneeL').oninput=e=>kneeL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('ankleL').oninput=e=>ankleL.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('hipR').oninput=e=>hipR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('kneeR').oninput=e=>kneeR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+    document.getElementById('ankleR').oninput=e=>ankleR.rotation.z=THREE.MathUtils.degToRad(e.target.value);
+
+    // Botón
+    document.getElementById('goIndex').onclick=()=>window.location.href='index.html';
+
+    // Animación
+    function animate(){ requestAnimationFrame(animate); renderer.render(scene,camera); }
+    animate();
+
+    window.addEventListener('resize',()=>{
+      camera.aspect=window.innerWidth/window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth,window.innerHeight);
+    });
+  </script>
+  </body>
+</html>
