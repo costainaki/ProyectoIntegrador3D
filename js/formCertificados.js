@@ -41,10 +41,18 @@ function enviarMail() {
         `Nombre y Apellido: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nEmpresa: ${empresa}\n\nMensaje:\n${mensaje}`
     );
 
-    // Enlace mailto
     const mailtoLink = `mailto:agostina.collado@gmail.com?subject=${asunto}&body=${cuerpo}`;
 
-    // Abrir el cliente de correo
+    // Mostrar el cartel de éxito
+    const cartel = document.getElementById("mensajeExito");
+    cartel.classList.remove("d-none");
+
+    // Opcional: ocultarlo después de unos segundos
+    setTimeout(() => {
+        cartel.classList.add("d-none");
+    }, 5000);
+
+    // Abrir el mailto
     window.location.href = mailtoLink;
 }
 
