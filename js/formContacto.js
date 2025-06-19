@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajeExito = document.getElementById("mensajeExito");
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
     const datos = {
         nombre: formulario.nombre.value.trim(),
@@ -14,36 +14,55 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (validarFormulario(datos)) {
-      // Mostrar cartel de éxito antes de redirigir
-    mensajeExito.classList.remove("d-none");
+        mensajeExito.classList.remove("d-none");
 
-      // Esperar un momento para que el cartel se vea
-    setTimeout(() => {
-        const asunto = encodeURIComponent("Consulta desde formulario de contacto");
-        const cuerpo = encodeURIComponent(
-        `Nombre y Apellido: ${datos.nombre}\nEmail: ${datos.email}\nTeléfono: ${datos.telefono}\nEmpresa: ${datos.empresa}\n\nMensaje:\n${datos.mensaje}`
+        setTimeout(() => {
+            const asunto = encodeURIComponent("Consulta desde formulario de contacto");
+            const cuerpo = encodeURIComponent(
+            `Nombre y Apellido: ${datos.nombre}\nEmail: ${datos.email}\nTeléfono: ${datos.telefono}\nEmpresa: ${datos.empresa}\n\nMensaje:\n${datos.mensaje}`
         );
         const mailtoLink = `mailto:agostina.collado@gmail.com?subject=${asunto}&body=${cuerpo}`;
 
         window.location.href = mailtoLink;
 
-        // Ocultar cartel y resetear formulario después
         setTimeout(() => {
             mensajeExito.classList.add("d-none");
             formulario.reset();
-        }, 3000);
-      }, 300); // este pequeño delay asegura que el cartel aparezca
+
+            ["nombre", "email", "telefono", "empresa", "mensaje"].forEach(id => {
+            formulario[id].classList.remove("is-valid", "is-invalid");
+                });
+            }, 3000);
+        }, 300);
     }
 });
 
-    function validarFormulario(d) {
+function validarFormulario(d) {
     let valido = true;
 
-    if (!/^[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}$/.test(d.nombre)) valido = false;
-    if (!/^\S+@\S+\.\S+$/.test(d.email)) valido = false;
-    if (d.telefono && !/^\+\d{12}$/.test(d.telefono)) valido = false;
-    if (d.empresa.length < 2) valido = false;
-    if (d.mensaje.length < 5) valido = false;
+    const campos = {
+        nombre: { valor: d.nombre, regex: /^[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}$/ },
+        email: { valor: d.email, regex: /^\S+@\S+\.\S+$/ },
+        telefono: { valor: d.telefono, regex: /^\+\d{12}$/, opcional: true },
+        empresa: { valor: d.empresa, regex: /^[A-Za-zÁÉÍÓÚÑñáéíóú0-9\s&.,()\-'"]{2,}$/ },
+        mensaje: { valor: d.mensaje, regex: /^.{5,}$/ }
+    };
+
+    for (const campo in campos) {
+        const input = document.getElementById(campo);
+        const { valor, regex, opcional } = campos[campo];
+
+        input.classList.remove("is-valid", "is-invalid");
+
+        if (opcional && valor === "") {
+            input.classList.add("is-valid");
+        } else if (regex.test(valor)) {
+            input.classList.add("is-valid");
+        } else {
+            input.classList.add("is-invalid");
+            valido = false;
+        }
+    }
 
     return valido;
     }
