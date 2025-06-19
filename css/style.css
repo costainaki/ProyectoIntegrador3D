@@ -111,7 +111,7 @@ section.main-content {
     z-index: 1100;
   }
   .ejercicios-3d {
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
@@ -460,7 +460,7 @@ button.btn:hover {
 
 /* ---------------------- EJERCICIOS --------------------- */
 .ejercicios-3d {
-  font-family: Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
