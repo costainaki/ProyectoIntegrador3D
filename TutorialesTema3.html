@@ -25,17 +25,17 @@
     </head>
     <body>
         <nav
-            class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center px-4 py-1">
-            <button class="btn text-black p-0 menu-btn menu-toggle">
-                <i class="bi bi-list" style="font-size: 1.3rem;"></i>
-            </button>
-            <a href="index.html" class="navbar-brand m-0 px-2">
-                <img src="images/logo.png" alt="Logo" style="height: 35px;">
-            </a>
-        </nav>
-        <button class="btn text-black p-0 menu-btn menu-toggle">
-            <i class="bi bi-list" style="font-size: 1.3rem;"></i>
-        </button>
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+      </button>
+      <a href="index.html" class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
+      </a>
+    </nav>
+    <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
+      <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+    </button>
         <div class="layout-wrapper">
             <aside class="sidebar p-3" id="sidebar">
                 <div class="d-lg-none d-flex justify-content-end mb-2">
