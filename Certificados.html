@@ -17,7 +17,7 @@
 
   <link rel='stylesheet' href='./css/style.css'>
 
-  <script src='./js/main.js' defer></script>
+  <script src="validacionesFormulario.js"></script>
 </head>
 
 <body>
@@ -100,37 +100,73 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
               </div>
               <div class="modal-body">
-                <form method="post" id="formulario" name="formulario">
+                <form method="post" id="formulario" name="formulario" novalidate>
+
+                  <!-- Nombre -->
                   <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre y Apellido"
-                      pattern="[A-Za-z\s]{3,}" required>
+                    <input type="text" class="form-control" name="nombre" id="nombre"
+                      placeholder="Nombre y Apellido"
+                      pattern="[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}" required
+                      title="Debe tener al menos 3 letras y solo letras/espacios.">
+                    <div class="invalid-feedback">
+                      Ingresá un nombre válido (mínimo 3 letras, solo letras y espacios).
+                    </div>
                   </div>
+
+                  <!-- Email -->
                   <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                    <input type="email" class="form-control" name="email" id="email"
+                      placeholder="Email" required
+                      title="Ingresá un email válido.">
+                    <div class="invalid-feedback">
+                      Ingresá un correo electrónico válido.
+                    </div>
                   </div>
+
+                  <!-- Teléfono -->
                   <div class="mb-3">
-                    <label for="tel" class="form-label">Teléfono <span class="text-muted">(opcional)</span></label>
-                    <input type="text" class="form-control" name="telefono" id="telefono" pattern="[0-9]{6,}"
-                      placeholder="Número de teléfono">
+                    <label for="telefono" class="form-label">Teléfono <span class="text-muted">(opcional)</span></label>
+                    <input type="text" class="form-control" name="telefono" id="telefono"
+                      placeholder="+541112345678"
+                      pattern="^\+\d{12}$"
+                      title="Debe comenzar con '+' y tener exactamente 12 dígitos.">
+                    <div class="invalid-feedback">
+                      El teléfono debe empezar con '+' y tener 12 dígitos (ej: +541112345678).
+                    </div>
                   </div>
+
+                  <!-- Empresa -->
                   <div class="mb-3">
                     <label for="empresa" class="form-label">Empresa/organización</label>
                     <input type="text" class="form-control" name="empresa" id="empresa"
-                      placeholder="Nombre de la empresa u organización" required>
+                      placeholder="Nombre de la empresa u organización" required
+                      pattern=".{2,}" title="Este campo es obligatorio.">
+                    <div class="invalid-feedback">
+                      Ingresá el nombre de tu empresa u organización.
+                    </div>
                   </div>
+
+                  <!-- Mensaje -->
                   <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" name="empresa" id="mensaje" rows="3"
-                      placeholder="Cuéntanos sobre tu empresa, objetivos, etc..."></textarea>
+                    <textarea class="form-control" name="mensaje" id="mensaje" rows="3"
+                      placeholder="Contanos sobre tu empresa, objetivos, etc..."
+                      required minlength="5"
+                      title="El mensaje debe tener al menos 5 caracteres."></textarea>
+                    <div class="invalid-feedback">
+                      El mensaje debe tener al menos 5 caracteres.
+                    </div>
                   </div>
+
                   <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
+
 
         <!-- TARJETAS CERTIFICADOS -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 mt-4">
