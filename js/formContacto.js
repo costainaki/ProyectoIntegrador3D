@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `Nombre y Apellido: ${datos.nombre}\nEmail: ${datos.email}\nTeléfono: ${datos.telefono}\nEmpresa: ${datos.empresa}\n\nMensaje:\n${datos.mensaje}`
         );
 
-        const mailtoLink = `mailto:agostina.collado@gmail.com?subject=${asunto}&body=${cuerpo}`;
+        const mailtoLink = `mailto:agostinacollado15@gmail.com?subject=${asunto}&body=${cuerpo}`;
         window.location.href = mailtoLink;
     }
 });

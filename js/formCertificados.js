@@ -55,7 +55,7 @@ function enviarMail() {
         `Nombre y Apellido: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nEmpresa: ${empresa}\n\nMensaje:\n${mensaje}`
     );
 
-    const mailtoLink = `mailto:agostina.collado@gmail.com?subject=${asunto}&body=${cuerpo}`;
+    const mailtoLink = `mailto:agostinacollado15@gmail.com?subject=${asunto}&body=${cuerpo}`;
 
     // Mostrar el cartel de éxito
     const cartel = document.getElementById("mensajeExito");
