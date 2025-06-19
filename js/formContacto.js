@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function validarFormulario(d) {
         let valido = true;
+        let errores = [];
 
         const campos = {
             nombre: {
@@ -81,16 +82,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (!regex.test(valor)) {
-                alert(mensaje);
+                errores.push(mensaje);
                 input.classList.add("is-invalid");
                 valido = false;
-                break; // Detiene la validación para corregir un error a la vez
             } else {
                 input.classList.add("is-valid");
             }
         }
 
+        if (!valido) {
+            alert("Por favor corregí los siguientes errores:\n\n- " + errores.join("\n- "));
+        }
+
         return valido;
     }
 });
-
