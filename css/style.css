@@ -479,6 +479,18 @@ button.btn:hover {
   margin-bottom: 20px;
 }
 
+.ejercicios-3d label {
+  display: block;
+}
+
+.ejercicios-3d p {
+  display: block;
+  text-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+
 .ejercicios-3d .resultado {
   padding: 15px;
   margin-top: 20px;
