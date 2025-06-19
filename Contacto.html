@@ -1,177 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <title>Contacto - ZAxis</title>
+    <title>Contacto - ZAxis</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
 
-  <link rel='stylesheet' href='./css/style.css'>
-  <script src="./js/formContacto.js" defer></script>
-</head>
+    <link rel='stylesheet' href='./css/style.css'>
+    <script src="./js/formContacto.js" defer></script>
+  </head>
 
-<body class="bg-body-tertiary">
-  <!-- NAVBAR -->
-  <nav
-    class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
-    <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+  <body class="bg-body-tertiary">
+    <!-- NAVBAR -->
+    <nav
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+      </button>
+      <a href="index.html"
+        class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
+      </a>
+    </nav>
+    <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
       <i class="bi bi-list" style="font-size: 1.3rem;"></i>
     </button>
-    <a href="index.html" class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
-      <img src="images/logo.png" alt="Logo" style="height: 35px;">
-    </a>
-  </nav>
-  <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
-    <i class="bi bi-list" style="font-size: 1.3rem;"></i>
-  </button>
-  <div class="layout-wrapper">
-    <aside class="sidebar p-3" id="sidebar">
-      <div class="d-lg-none d-flex justify-content-end mb-2">
-        <button class="btn-close" aria-label="close-sidebar" id="close-sidebar"></button>
-      </div>
-      <div class="sidebar-section text-center">
-        <a href="index.html" class="navbar-brand m-0 px-2">
-          <img src="images/logo.png" class="mx-auto" style="width: 150px; height: auto;">
-        </a>
-      </div>
-      <div class="sidebar-section">
-        <h6>Menú Principal</h6>
-        <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-book"></i>
-          Tutoriales</a>
-        <a href="Ejercicios.html" class="sidebar-link"><i class="bi bi-pencil-square"></i>
-          Ejercicios</a>
-        <a href="Certificados.html" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-          Certificados</a>
-        <a href="Eventos.html" class="sidebar-link"><i class="bi bi-calendar-date"></i>
-          Calendario</a>
-      </div>
-      <div class="sidebar-section">
-        <h6>Clases</h6>
-        <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-box-fill"></i>
-          Tipos de diseño 3D</a>
-        <a href="TutorialesTema2.html" class="sidebar-link"><i class="bi bi-noise-reduction"></i>
-          Mallas y Esqueletos</a>
-        <a href="TutorialesTema3.html" class="sidebar-link"><i class="bi bi-map"></i>
-          Texturas y Mapas UV</a>
-        <a href="TutorialesTema4.html" class="sidebar-link"><i class="bi bi-clock-fill"></i>
-          Animación 3D</a>
-      </div>
-    </aside>
-    <div id="sidebar-backdrop"></div>
+    <div class="layout-wrapper">
+      <aside class="sidebar p-3" id="sidebar">
+        <div class="d-lg-none d-flex justify-content-end mb-2">
+          <button class="btn-close" aria-label="close-sidebar"
+            id="close-sidebar"></button>
+        </div>
+        <div class="sidebar-section text-center">
+          <a href="index.html" class="navbar-brand m-0 px-2">
+            <img src="images/logo.png" class="mx-auto"
+              style="width: 150px; height: auto;">
+          </a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Menú Principal</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-book"></i>
+            Tutoriales</a>
+          <a href="Ejercicios.html" class="sidebar-link"><i
+              class="bi bi-pencil-square"></i>
+            Ejercicios</a>
+          <a href="Certificados.html" class="sidebar-link"><i
+              class="bi bi-mortarboard"></i>
+            Certificados</a>
+          <a href="Eventos.html" class="sidebar-link"><i
+              class="bi bi-calendar-date"></i>
+            Calendario</a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Clases</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-box-fill"></i>
+            Tipos de diseño 3D</a>
+          <a href="TutorialesTema2.html" class="sidebar-link"><i
+              class="bi bi-noise-reduction"></i>
+            Mallas y Esqueletos</a>
+          <a href="TutorialesTema3.html" class="sidebar-link"><i
+              class="bi bi-map"></i>
+            Texturas y Mapas UV</a>
+          <a href="TutorialesTema4.html" class="sidebar-link"><i
+              class="bi bi-clock-fill"></i>
+            Animación 3D</a>
+          <a href="Simulacion.html" class="sidebar-link"><i
+              class="bi bi-tools"></i>
+            Simulación 3D</a>
+        </div>
+      </aside>
+      <div id="sidebar-backdrop"></div>
 
-    <div class="content mt-5 main-content flex-grow-1">
-      <div class="container">
-        <div class="row align-items-stretch justify-content-center contact-wrap contacto">
-          <!-- FORMULARIO -->
-          <div class="col-lg-7">
-            <div class="form">
-              <h3>Contactate con nosotros!</h3>
-              <form class="mb-5" id="formulario" name="formulario" action="#">
-                <div class="row">
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="nombre" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre y Apellido"
-                      pattern="[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}" required
-                      title="Debe tener al menos 3 letras y solo letras/espacios.">
-                    <div class="invalid-feedback">
-                      Ingresá un nombre válido (mínimo 3 letras, solo letras y espacios).
+      <div class="content mt-5 main-content flex-grow-1">
+        <div class="container">
+          <div
+            class="row align-items-stretch justify-content-center contact-wrap contacto">
+            <!-- FORMULARIO -->
+            <div class="col-lg-7">
+              <div class="form">
+                <h3>Contactate con nosotros!</h3>
+                <form class="mb-5" id="formulario" name="formulario" action="#">
+                  <div class="row">
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="nombre" class="form-label">Nombre y
+                        Apellido</label>
+                      <input type="text" class="form-control" name="nombre"
+                        id="nombre" placeholder="Nombre y Apellido"
+                        pattern="[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}" required
+                        title="Debe tener al menos 3 letras y solo letras/espacios.">
+                      <div class="invalid-feedback">
+                        Ingresá un nombre válido (mínimo 3 letras, solo letras y
+                        espacios).
+                      </div>
+                    </div>
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email"
+                        id="email" placeholder="Email" required
+                        title="Ingresá un email válido.">
+                      <div class="invalid-feedback">
+                        Ingresá un correo electrónico válido.
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required
-                      title="Ingresá un email válido.">
-                    <div class="invalid-feedback">
-                      Ingresá un correo electrónico válido.
+                  <div class="row">
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="telefono" class="form-label">Teléfono <span
+                          class="text-muted">(opcional)</span></label>
+                      <input type="text" class="form-control" name="telefono"
+                        id="telefono" placeholder="+541112345678"
+                        pattern="^\+\d{12}$"
+                        title="Debe comenzar con '+' y tener exactamente 12 dígitos.">
+                      <div class="invalid-feedback">
+                        El teléfono debe empezar con '+' y tener 12 dígitos (ej:
+                        +541112345678).
+                      </div>
+                    </div>
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="empresa"
+                        class="form-label">Empresa/organización</label>
+                      <input type="text" class="form-control" name="empresa"
+                        id="empresa"
+                        placeholder="Nombre de la empresa u organización"
+                        required pattern=".{2,}"
+                        title="Este campo es obligatorio.">
+                      <div class="invalid-feedback">
+                        Ingresá el nombre de tu empresa u organización.
+                      </div>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <label for="mensaje"
+                        class="col-form-label">Mensaje</label>
+                      <textarea class="form-control" name="mensaje" id="mensaje"
+                        cols="30" rows="4"
+                        placeholder="Ingrese su consulta aquí..."
+                        required></textarea>
+                      <div class="invalid-feedback">
+                        El mensaje debe tener al menos 5 caracteres.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <input type="submit" value="Enviar"
+                        class="btn btn-primary rounded-0 py-2 px-4">
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+                </form>
+                <div id="mensajeExito" class="alert alert-success mt-3 d-none"
+                  role="alert">
+                  ¡Formulario enviado con éxito!
                 </div>
-                <div class="row">
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="telefono" class="form-label">Teléfono <span class="text-muted">(opcional)</span></label>
-                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder="+541112345678"
-                      pattern="^\+\d{12}$" title="Debe comenzar con '+' y tener exactamente 12 dígitos.">
-                    <div class="invalid-feedback">
-                      El teléfono debe empezar con '+' y tener 12 dígitos (ej: +541112345678).
-                    </div>
-                  </div>
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="empresa" class="form-label">Empresa/organización</label>
-                    <input type="text" class="form-control" name="empresa" id="empresa"
-                      placeholder="Nombre de la empresa u organización" required pattern=".{2,}"
-                      title="Este campo es obligatorio.">
-                    <div class="invalid-feedback">
-                      Ingresá el nombre de tu empresa u organización.
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group mb-5">
-                    <label for="mensaje" class="col-form-label">Mensaje</label>
-                    <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="4"
-                      placeholder="Ingrese su consulta aquí..." required></textarea>
-                    <div class="invalid-feedback">
-                      El mensaje debe tener al menos 5 caracteres.
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <input type="submit" value="Enviar" class="btn btn-primary rounded-0 py-2 px-4">
-                    <span class="submitting"></span>
-                  </div>
-                </div>
-              </form>
-              <div id="mensajeExito" class="alert alert-success mt-3 d-none" role="alert">
-                    ¡Formulario enviado con éxito!
-                  </div>
+              </div>
             </div>
-          </div>
 
-          <!-- MEDIOS DE CONTACTO -->
-          <div class="col-lg-3">
-            <div class="contact-info p-2 rounded shadow-sm">
-              <h4 class="mb-2">Tambien puede encontrarnos en:</h4>
-              <ul class="list-unstyled gap-2">
-                <li class="d-flex mb-3">
-                  <span class="wrap-icon bi bi-envelope-fill me-3"></span>
-                  <span class="text">info@zaxis.com</span>
-                </li>
-                <li class="d-flex mb-3">
-                  <span class="wrap-icon bi bi-telephone-fill me-3"></span>
-                  <span class="text">+54 (266) 5315703</span>
-                </li>
-                <li class="d-flex mb-3">
-                  <span class="wrap-icon bi bi-geo-alt-fill me-3"></span>
-                  <span class="text">Torre del Líbano 3-C, Av. Sarmiento 829, D5700 San Luis, San Luis, Argentina</span>
-                </li>
-              </ul>
+            <!-- MEDIOS DE CONTACTO -->
+            <div class="col-lg-3">
+              <div class="contact-info p-2 rounded shadow-sm">
+                <h4 class="mb-2">Tambien puede encontrarnos en:</h4>
+                <ul class="list-unstyled gap-2">
+                  <li class="d-flex mb-3">
+                    <span class="wrap-icon bi bi-envelope-fill me-3"></span>
+                    <span class="text">info@zaxis.com</span>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="wrap-icon bi bi-telephone-fill me-3"></span>
+                    <span class="text">+54 (266) 5315703</span>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="wrap-icon bi bi-geo-alt-fill me-3"></span>
+                    <span class="text">Torre del Líbano 3-C, Av. Sarmiento 829,
+                      D5700 San Luis, San Luis, Argentina</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="text-center py-3 mt-5 border-top">
-    <p class="mb-0 text-muted fontsize-xs">© Agostina Collado, Iñaki Costa, Fabrizio Rolón</p>
-  </footer>
+    <footer class="text-center py-3 mt-5 border-top">
+      <p class="mb-0 text-muted fontsize-xs">© Agostina Collado, Iñaki Costa,
+        Fabrizio Rolón</p>
+    </footer>
 
-  <a href="Contacto.html" class="btn-contacto btn btn-primary rounded-circle shadow">
-    <i class="bi bi-chat-right-text"></i>
-  </a>
+    <a href="Contacto.html"
+      class="btn-contacto btn btn-primary rounded-circle shadow">
+      <i class="bi bi-chat-right-text"></i>
+    </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 
 </html>
