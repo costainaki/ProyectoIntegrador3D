@@ -485,7 +485,10 @@ button.btn:hover {
 
 .ejercicios-3d p {
   display: block;
-  text-wrap: wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
   padding-top: 10px;
   padding-bottom: 0px;
 }
