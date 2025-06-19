@@ -1,190 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <title>Inicio - ZAxis</title>
+        <title>Mallas y Esqueletos 3D - ZAxis</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
 
-    <link rel='stylesheet' href='./css/style.css'>
+        <link rel='stylesheet' href='./css/style.css'>
 
-    <script src='./js/main.js' defer></script>
-</head>
+        <script src='./js/main.js' defer></script>
+    </head>
 
-<body>
-    <nav
-        class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
-        <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+    <body>
+        <nav
+            class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+            <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+                <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+            </button>
+            <a href="index.html"
+                class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
+                <img src="images/logo.png" alt="Logo" style="height: 35px;">
+            </a>
+        </nav>
+        <button
+            class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
             <i class="bi bi-list" style="font-size: 1.3rem;"></i>
         </button>
-        <a href="index.html" class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
-            <img src="images/logo.png" alt="Logo" style="height: 35px;">
-        </a>
-    </nav>
-    <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
-        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
-    </button>
-    <div class="layout-wrapper">
-        <aside class="sidebar p-3" id="sidebar">
-            <div class="d-lg-none d-flex justify-content-end mb-2">
-                <button class="btn-close" aria-label="close-sidebar" id="close-sidebar"></button>
-            </div>
-            <div class="sidebar-section text-center">
-                <a href="index.html" class="navbar-brand m-0 px-2">
-                    <img src="images/logo.png" class="mx-auto" style="width: 150px; height: auto;">
-                </a>
-            </div>
-            <div class="sidebar-section">
-                <h6>Menú Principal</h6>
-                <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-book"></i>
-                    Tutoriales</a>
-                <a href="Ejercicios.html" class="sidebar-link"><i class="bi bi-pencil-square"></i>
-                    Ejercicios</a>
-                <a href="Certificados.html" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-                    Certificados</a>
-                <a href="Eventos.html" class="sidebar-link"><i class="bi bi-calendar-date"></i>
-                    Calendario</a>
-            </div>
-            <div class="sidebar-section">
-                <h6>Clases</h6>
-                <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-box-fill"></i> Tipos de
-                    diseño 3D</a>
-                <a href="TutorialesTema2.html" class="sidebar-link"><i class="bi bi-noise-reduction"></i> Mallas y
-                    Esqueletos</a>
-                <a href="TutorialesTema3.html" class="sidebar-link"><i class="bi bi-map"></i>
-                    Texturas
-                    y
-                    Mapas UV</a>
-                <a href="TutorialesTema4.html" class="sidebar-link"><i class="bi bi-clock-fill"></i>
-                    Animación
-                    3D</a>
-            </div>
-        </aside>
-        <div id="sidebar-backdrop"></div>
-        <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0">
-            <div class="container mt-2">
-                <div class="row align-items-center justify-content-center g-0">
-                    <header class="mb-5">
-                        <h1><span class="emoji-title">🧠</span>Tema 2:
-                            Mallas y Esqueletos 3D</h1>
-                        <p class="lead">Ya sabemos qué es el diseño
-                            poligonal, pero… ¿en qué consiste exactamente?
-                            ¿Por dónde se empieza? ¿Qué hace falta para
-                            crear un personaje? Pues bien, un modelo 3D
-                            consiste en cientos de miles de polígonos
-                            relacionados entre sí, formados por tres
-                            elementos básicos:</p>
-                    </header>
+        <div class="layout-wrapper">
+            <aside class="sidebar p-3" id="sidebar">
+                <div class="d-lg-none d-flex justify-content-end mb-2">
+                    <button class="btn-close" aria-label="close-sidebar"
+                        id="close-sidebar"></button>
+                </div>
+                <div class="sidebar-section text-center">
+                    <a href="index.html" class="navbar-brand m-0 px-2">
+                        <img src="images/logo.png" class="mx-auto"
+                            style="width: 150px; height: auto;">
+                    </a>
+                </div>
+                <div class="sidebar-section">
+                    <h6>Menú Principal</h6>
+                    <a href="TutorialesTema1.html" class="sidebar-link"><i
+                            class="bi bi-book"></i>
+                        Tutoriales</a>
+                    <a href="Ejercicios.html" class="sidebar-link"><i
+                            class="bi bi-pencil-square"></i>
+                        Ejercicios</a>
+                    <a href="Certificados.html" class="sidebar-link"><i
+                            class="bi bi-mortarboard"></i>
+                        Certificados</a>
+                    <a href="Eventos.html" class="sidebar-link"><i
+                            class="bi bi-calendar-date"></i>
+                        Calendario</a>
+                </div>
+                <div class="sidebar-section">
+                    <h6>Clases</h6>
+                    <a href="TutorialesTema1.html" class="sidebar-link"><i
+                            class="bi bi-box-fill"></i> Tipos de
+                        diseño 3D</a>
+                    <a href="TutorialesTema2.html" class="sidebar-link"><i
+                            class="bi bi-noise-reduction"></i> Mallas y
+                        Esqueletos</a>
+                    <a href="TutorialesTema3.html" class="sidebar-link"><i
+                            class="bi bi-map"></i>
+                        Texturas
+                        y
+                        Mapas UV</a>
+                    <a href="TutorialesTema4.html" class="sidebar-link"><i
+                            class="bi bi-clock-fill"></i>
+                        Animación
+                        3D</a>
+                </div>
+            </aside>
+            <div id="sidebar-backdrop"></div>
+            <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0">
+                <div class="container mt-2">
+                    <div
+                        class="row align-items-center justify-content-center g-0">
+                        <header class="mb-5">
+                            <h1><span class="emoji-title">🦴</span>Tema 2:
+                                Mallas y Esqueletos 3D</h1>
+                            <p class="lead">Ya sabemos qué es el diseño
+                                poligonal, pero… ¿en qué consiste exactamente?
+                                ¿Por dónde se empieza? ¿Qué hace falta para
+                                crear un personaje? Pues bien, un modelo 3D
+                                consiste en cientos de miles de polígonos
+                                relacionados entre sí, formados por tres
+                                elementos básicos:</p>
+                        </header>
 
-                    <h3> Elementos clave de una malla:</h3>
-                    <ul>
-                        <li>🟢 <strong>Vértices:</strong> Son puntos en el
-                            espacio tridimensional. Representan la unidad
-                            más pequeña del modelado 3D. Cuantos más
-                            vértices tenga una malla, mayor será su nivel de
-                            detalle.
-                            <img src="images/vertices.jpg" alt="Vértice" class="img-fluid">
-                            <br>
-                        </li>
+                        <h3> Elementos clave de una malla:</h3>
+                        <ul>
+                            <li>🟢 <strong>Vértices:</strong> Son puntos en el
+                                espacio tridimensional. Representan la unidad
+                                más pequeña del modelado 3D. Cuantos más
+                                vértices tenga una malla, mayor será su nivel de
+                                detalle.
+                                <img src="images/vertices.jpg" alt="Vértice"
+                                    class="img-fluid">
+                                <br>
+                            </li>
 
-                        <li>🟡 <strong>Aristas:</strong> Son las líneas que
-                            conectan dos vértices. Ayudan a definir la
-                            estructura del modelo, especialmente en modelos
-                            de tipo low poly o de geometría clara
-                            <img src="images/edges.jpg" alt="Arista" class="img-fluid">
-                            <br>
+                            <li>🟡 <strong>Aristas:</strong> Son las líneas que
+                                conectan dos vértices. Ayudan a definir la
+                                estructura del modelo, especialmente en modelos
+                                de tipo low poly o de geometría clara
+                                <img src="images/edges.jpg" alt="Arista"
+                                    class="img-fluid">
+                                <br>
 
-                        </li>
-                        <li>🔺 <strong>Caras:</strong> Se forman cuando tres
-                            o más vértices se conectan para crear una
-                            superficie. Lo más común es usar triángulos o
-                            cuadriláteros, ya que los motores gráficos
-                            procesan mejor estas formas.
-                            <img src="images/faces.jpg" alt="Cara" class="img-fluid">
-                            <br>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>🔺 <strong>Caras:</strong> Se forman cuando tres
+                                o más vértices se conectan para crear una
+                                superficie. Lo más común es usar triángulos o
+                                cuadriláteros, ya que los motores gráficos
+                                procesan mejor estas formas.
+                                <img src="images/faces.jpg" alt="Cara"
+                                    class="img-fluid">
+                                <br>
+                            </li>
+                        </ul>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Partes Fundamentales de un Modelo 3D</h2>
+                        <h2>Partes Fundamentales de un Modelo 3D</h2>
 
-                    <h4> La Malla (Mesh)</h4>
-                    <p>Es la representación visual del modelo. Puede
-                        suavizarse o subdividirse según el estilo del
-                        proyecto. Pero <strong>no puede moverse por sí
-                            sola</strong>.</p>
+                        <h4> La Malla (Mesh)</h4>
+                        <p>Es la representación visual del modelo. Puede
+                            suavizarse o subdividirse según el estilo del
+                            proyecto. Pero <strong>no puede moverse por sí
+                                sola</strong>.</p>
 
-                    <h4>🦴 El Esqueleto (Rig)</h4>
-                    <p>Es el sistema de huesos internos que le da movilidad
-                        a la malla. Se organiza en <strong>jerarquías
-                            padre-hijo</strong> para permitir animaciones
-                        fluidas como caminar o correr.</p>
-                    <img src="images/meshrig.jpg" alt="Mesh y Rig" class="img-fluid mt-2 rounded shadow-sm"
-                        style="width: 750px; height: auto" loading="lazy">
+                        <h4>🦴 El Esqueleto (Rig)</h4>
+                        <p>Es el sistema de huesos internos que le da movilidad
+                            a la malla. Se organiza en <strong>jerarquías
+                                padre-hijo</strong> para permitir animaciones
+                            fluidas como caminar o correr.</p>
+                        <img src="images/meshrig.jpg" alt="Mesh y Rig"
+                            class="img-fluid mt-2 rounded shadow-sm"
+                            style="width: 750px; height: auto" loading="lazy">
 
-                    <p><br>El hueso principal (root) transmite
-                        movimiento a los
-                        demás. Esto permite controlar brazos, piernas o
-                        expresiones faciales fácilmente.</p>
-                    <img src="images/jerarquia.gif" alt="Jerarquía de huesos"
-                        class="img-fluid img-unificada mt-2 mb-4 rounded shadow-sm" loading="lazy">
+                        <p><br>El hueso principal (root) transmite
+                            movimiento a los
+                            demás. Esto permite controlar brazos, piernas o
+                            expresiones faciales fácilmente.</p>
+                        <img src="images/jerarquia.gif"
+                            alt="Jerarquía de huesos"
+                            class="img-fluid img-unificada mt-2 mb-4 rounded shadow-sm"
+                            loading="lazy">
 
-                    <hr>
+                        <hr>
 
-                    <h2>🎨 Pintado de Pesos (Weight Painting)</h2>
-                    <p>Permite definir qué partes de la malla son afectadas
-                        por cada hueso del esqueleto.</p>
-                    <p>Se representa con colores:</p>
-                    <ul>
-                        <li>🔴 <strong>Rojo:</strong> Máxima influencia</li>
-                        <li>🔵 <strong>Azul:</strong> Mínima influencia</li>
+                        <h2>🎨 Pintado de Pesos (Weight Painting)</h2>
+                        <p>Permite definir qué partes de la malla son afectadas
+                            por cada hueso del esqueleto.</p>
+                        <p>Se representa con colores:</p>
+                        <ul>
+                            <li>🔴 <strong>Rojo:</strong> Máxima influencia</li>
+                            <li>🔵 <strong>Azul:</strong> Mínima influencia</li>
 
-                    </ul>
-                    <img src="images/weightpaint.jpg" alt="Pintado de pesos"
-                        class="img-fluid mt-2 mb-4 rounded shadow-sm" style="width: 900px; height: auto;">
-                    <p>Una correcta distribución de pesos evita errores
-                        visuales como estiramientos o torsiones poco
-                        naturales.</p>
+                        </ul>
+                        <img src="images/weightpaint.jpg" alt="Pintado de pesos"
+                            class="img-fluid mt-2 mb-4 rounded shadow-sm"
+                            style="width: 900px; height: auto;">
+                        <p>Una correcta distribución de pesos evita errores
+                            visuales como estiramientos o torsiones poco
+                            naturales.</p>
 
-                    <hr>
+                        <hr>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <button id="btnAnterior"
+                            onclick="window.location.href='TutorialesTema1.html';"
+                            class="btn btn-outline-secondary"
+                            title="Ir al tema anterior">←
+                            Anterior</button>
+
+                        <button id="btnMenu"
+                            onclick="window.location.href='index.html';"
+                            class="btn btn-primary"
+                            title="Volver al menú principal">🏠 Menú
+                            Principal</button>
+                        <button id="btnSiguiente"
+                            onclick="window.location.href='TutorialesTema3.html';"
+                            class="btn btn-outline-secondary"
+                            title="Ir al siguiente tema">Siguiente →</button>
+                    </div>
                     <br>
                 </div>
-                <div class="d-flex justify-content-between mt-4">
-                    <button id="btnAnterior" onclick="window.location.href='TutorialesTema1.html';"
-                        class="btn btn-outline-secondary" title="Ir al tema anterior">←
-                        Anterior</button>
+            </section>
+        </div>
 
-                    <button id="btnMenu" onclick="window.location.href='index.html';" class="btn btn-primary"
-                        title="Volver al menú principal">🏠 Menú
-                        Principal</button>
-                    <button id="btnSiguiente" onclick="window.location.href='TutorialesTema3.html';"
-                        class="btn btn-outline-secondary" title="Ir al siguiente tema">Siguiente →</button>
-                </div>
-                <br>
-            </div>
-        </section>
-    </div>
+        <footer class="text-center py-3 mt-5 border-top footer">
+            <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa,
+                Fabrizio Rolón</p>
+        </footer>
 
-    <footer class="text-center py-3 mt-5 border-top footer">
-        <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa, Fabrizio Rolón</p>
-    </footer>
+        <a href="Contacto.html"
+            class="btn-contacto btn btn-primary rounded-circle shadow">
+            <i class="bi bi-chat-right-text"></i>
+        </a>
 
-    <a href="Contacto.html" class="btn-contacto btn btn-primary rounded-circle shadow">
-        <i class="bi bi-chat-right-text"></i>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/menu.js"></script>
-</body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
 
 </html>
