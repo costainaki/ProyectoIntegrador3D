@@ -79,26 +79,40 @@
               <form class="mb-5" method="post" id="formulario" name="formulario">
                 <div class="row">
                   <div class="col-md-6 form-group mb-5">
-                    <label for="nombre" class="col-form-label">Nombre y Apellido</label>
+                    <label for="nombre" class="form-label">Nombre y Apellido</label>
                     <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre y Apellido"
-                      required>
+                      pattern="[A-Za-zÁÉÍÓÚÑñáéíóú\s]{3,}" required
+                      title="Debe tener al menos 3 letras y solo letras/espacios.">
+                    <div class="invalid-feedback">
+                      Ingresá un nombre válido (mínimo 3 letras, solo letras y espacios).
+                    </div>
                   </div>
                   <div class="col-md-6 form-group mb-5">
-                    <label for="email" class="col-form-label">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required
+                      title="Ingresá un email válido.">
+                    <div class="invalid-feedback">
+                      Ingresá un correo electrónico válido.
+                    </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6 form-group mb-5">
-                    <label for="telefono" class="col-form-label">Teléfono <span
-                        class="text-muted">(opcional)</span></label>
-                    <input type="text" class="form-control" name="telefono" id="telefono" pattern="[0-9]{6,}"
-                      placeholder="Número de teléfono">
+                    <label for="telefono" class="form-label">Teléfono <span class="text-muted">(opcional)</span></label>
+                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder="+541112345678"
+                      pattern="^\+\d{12}$" title="Debe comenzar con '+' y tener exactamente 12 dígitos.">
+                    <div class="invalid-feedback">
+                      El teléfono debe empezar con '+' y tener 12 dígitos (ej: +541112345678).
+                    </div>
                   </div>
                   <div class="col-md-6 form-group mb-5">
-                    <label for="empresa" class="col-form-label">Empresa/organización</label>
+                    <label for="empresa" class="form-label">Empresa/organización</label>
                     <input type="text" class="form-control" name="empresa" id="empresa"
-                      placeholder="Nombre de la empresa u Organización" required>
+                      placeholder="Nombre de la empresa u organización" required pattern=".{2,}"
+                      title="Este campo es obligatorio.">
+                    <div class="invalid-feedback">
+                      Ingresá el nombre de tu empresa u organización.
+                    </div>
                   </div>
                 </div>
                 <div class="row">
@@ -106,6 +120,9 @@
                     <label for="mensaje" class="col-form-label">Mensaje</label>
                     <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="4"
                       placeholder="Ingrese su consulta aquí..." required></textarea>
+                    <div class="invalid-feedback">
+                      El mensaje debe tener al menos 5 caracteres.
+                    </div>
                   </div>
                 </div>
                 <div class="row">

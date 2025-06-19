@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!verificarDatos(e)) {
             e.preventDefault();
         }
+        else console.log("Tu mensaje ha sido enviado")
     });
 });
 
