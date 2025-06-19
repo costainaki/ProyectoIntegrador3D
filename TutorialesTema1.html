@@ -1,162 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <title>Inicio - ZAxis</title>
+    <title>Tipos de diseño 3D - ZAxis</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
 
-  <link rel='stylesheet' href='./css/style.css'>
+    <link rel='stylesheet' href='./css/style.css'>
 
-  <script src='./js/main.js' defer></script>
-</head>
+    <script src='./js/main.js' defer></script>
+  </head>
 
-<body>
-  <nav
-    class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
-    <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+  <body>
+    <nav
+      class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+      <button class="btn text-black p-0 menu-btn menu-toggle z-1">
+        <i class="bi bi-list" style="font-size: 1.3rem;"></i>
+      </button>
+      <a href="index.html"
+        class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
+        <img src="images/logo.png" alt="Logo" style="height: 35px;">
+      </a>
+    </nav>
+    <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
       <i class="bi bi-list" style="font-size: 1.3rem;"></i>
     </button>
-    <a href="index.html" class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
-      <img src="images/logo.png" alt="Logo" style="height: 35px;">
-    </a>
-  </nav>
-  <button class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
-    <i class="bi bi-list" style="font-size: 1.3rem;"></i>
-  </button>
-  <div class="layout-wrapper">
-    <aside class="sidebar p-3" id="sidebar">
-      <div class="d-lg-none d-flex justify-content-end mb-2">
-        <button class="btn-close" aria-label="close-sidebar" id="close-sidebar"></button>
-      </div>
-      <div class="sidebar-section text-center">
-        <a href="index.html" class="navbar-brand m-0 px-2">
-          <img src="images/logo.png" class="mx-auto" style="width: 150px; height: auto;">
-        </a>
-      </div>
-      <div class="sidebar-section">
-        <h6>Menú Principal</h6>
-        <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-book"></i>
-          Tutoriales</a>
-        <a href="Ejercicios.html" class="sidebar-link"><i class="bi bi-pencil-square"></i>
-          Ejercicios</a>
-        <a href="Certificados.html" class="sidebar-link"><i class="bi bi-mortarboard"></i>
-          Certificados</a>
-        <a href="Eventos.html" class="sidebar-link"><i class="bi bi-calendar-date"></i>
-          Calendario</a>
-      </div>
-      <div class="sidebar-section">
-        <h6>Clases</h6>
-        <a href="TutorialesTema1.html" class="sidebar-link"><i class="bi bi-box-fill"></i> Tipos de
-          diseño 3D</a>
-        <a href="TutorialesTema2.html" class="sidebar-link"><i class="bi bi-noise-reduction"></i> Mallas y
-          Esqueletos</a>
-        <a href="TutorialesTema3.html" class="sidebar-link"><i class="bi bi-map"></i>
-          Texturas
-          y
-          Mapas UV</a>
-        <a href="TutorialesTema4.html" class="sidebar-link"><i class="bi bi-clock-fill"></i>
-          Animación
-          3D</a>
-      </div>
-    </aside>
-    <div id="sidebar-backdrop"></div>
-    <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0">
-      <div class="container mt-2">
-        <div class="row align-items-center justify-content-center g-0">
-          <h1 class="mt-3">Tema 1: Tipos de diseño 3D</h1>
-
-          <h2 class="mt-4 align-items-center">Su historia:</h2>
-          <p>
-            El diseño 3D comenzó en la década de 1960 con los primeros
-            experimentos en gráficos por computadora. Ivan Sutherland
-            desarrolló
-            <strong>Sketchpad</strong> en 1963, el primer programa que
-            permitía
-            dibujar en una pantalla con una pluma óptica. En los años 70 y
-            80,
-            surgieron avances clave en modelado, renderizado y animación
-            por
-            empresas como Autodesk y Pixar. En los 90, con el aumento del
-            poder
-            de cómputo, el diseño 3D se expandió a campos como cine,
-            videojuegos, arquitectura e ingeniería.
-          </p>
-          <hr>
-          <p>Con esto en mente se pueden definir 3 tipos principales de
-            diseño
-            3D:</p>
-          <ul>
-            <li class="mb-4 align-items-center">
-              <strong>Poligonal:</strong> Este es el estilo de diseño más
-              popular. Se usa para crear modelos usando polígonos (tienen sus
-              caras, vértices, arístas, etc) y su uso se expande en campos
-              como los videojuegos, cine, animación, realidad virtual, etc.
-              <img src="images/hiphopdance.gif" alt="Ejemplo de modelo poligonal"
-                class="img-fluid img-unificada mt-2 rounded shadow-sm" loading="lazy" />
-            </li>
-            <hr>
-            <li class="mb-4 align-items-center">
-              <strong>Esculpido:</strong> Es un tipo de diseño que se basa en
-              ir deformando el modelo como si fuera arcilla digital. Es una
-              técnica que da resultados mucho más detallados, pero es
-              significativamente más complicado de llevar a cabo. Se usa
-              principalmente para hacer personajes detallados, criaturas
-              fantásticas y arte conceptual
-              <img src="images/sculptingmodelling.jpg" alt="Modelo 3D esculpido"
-                class="img-fluid img-unificada mt-2 rounded shadow-sm" loading="lazy" />
-            </li>
-            <hr>
-            <li class="mb-4 align-items-center">
-              <strong>Paramétrico:</strong> Usa parámetros aritméticosy
-              operaciones
-              lógicas, imprescindible para la industria de la ingeniería,
-              arquitectura y el diseño industrial.
-              <img src="images/aritmetic.gif" alt="Diseño paramétrico en 3D"
-                class="img-fluid img-unificada mt-2 rounded shadow-sm " loading="lazy" />
-            </li>
-          </ul>
-          <hr>
-          <p>
-            En este curso vamos a ahondar principalmente en el
-            <strong>diseño
-              poligonal</strong> por su facilidad de aprendizaje y su
-            versatilidad en múltiples industrias.
-          </p>
-          <div class="d-flex justify-content-between mt-4">
-            <button id="btnAnterior" class="btn btn-outline-secondary" title="Ir al tema anterior" disabled>←
-              Anterior</button>
-
-            <button id="btnMenu" onclick="window.location.href='index.html';" class="btn btn-primary"
-              title="Volver al menú principal">🏠 Menú Principal</button>
-            <button id="btnSiguiente" onclick="window.location.href='TutorialesTema2.html';"
-              class="btn btn-outline-secondary" title="Ir al siguiente tema">Siguiente →</button>
-          </div>
-          <br>
+    <div class="layout-wrapper">
+      <aside class="sidebar p-3" id="sidebar">
+        <div class="d-lg-none d-flex justify-content-end mb-2">
+          <button class="btn-close" aria-label="close-sidebar"
+            id="close-sidebar"></button>
         </div>
-      </div>
-    </section>
-  </div>
+        <div class="sidebar-section text-center">
+          <a href="index.html" class="navbar-brand m-0 px-2">
+            <img src="images/logo.png" class="mx-auto"
+              style="width: 150px; height: auto;">
+          </a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Menú Principal</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-book"></i>
+            Tutoriales</a>
+          <a href="Ejercicios.html" class="sidebar-link"><i
+              class="bi bi-pencil-square"></i>
+            Ejercicios</a>
+          <a href="Certificados.html" class="sidebar-link"><i
+              class="bi bi-mortarboard"></i>
+            Certificados</a>
+          <a href="Eventos.html" class="sidebar-link"><i
+              class="bi bi-calendar-date"></i>
+            Calendario</a>
+        </div>
+        <div class="sidebar-section">
+          <h6>Clases</h6>
+          <a href="TutorialesTema1.html" class="sidebar-link"><i
+              class="bi bi-box-fill"></i> Tipos de
+            diseño 3D</a>
+          <a href="TutorialesTema2.html" class="sidebar-link"><i
+              class="bi bi-noise-reduction"></i> Mallas y
+            Esqueletos</a>
+          <a href="TutorialesTema3.html" class="sidebar-link"><i
+              class="bi bi-map"></i>
+            Texturas
+            y
+            Mapas UV</a>
+          <a href="TutorialesTema4.html" class="sidebar-link"><i
+              class="bi bi-clock-fill"></i>
+            Animación
+            3D</a>
+        </div>
+      </aside>
+      <div id="sidebar-backdrop"></div>
+      <section class="main-content col-12 col-lg-9 px-4 mt-5 mt-lg-0 mt-1">
+        <div class="container mt-2">
+          <div class="row align-items-center justify-content-center g-0">
+            <h1 class="mt-3">Tema 1: Tipos de diseño 3D</h1>
 
-  <footer class="text-center py-3 mt-5 border-top footer">
-    <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa, Fabrizio Rolón</p>
-  </footer>
+            <h2 class="mt-4 align-items-center">Su historia:</h2>
+            <p>
+              El diseño 3D comenzó en la década de 1960 con los primeros
+              experimentos en gráficos por computadora. Ivan Sutherland
+              desarrolló
+              <strong>Sketchpad</strong> en 1963, el primer programa que
+              permitía
+              dibujar en una pantalla con una pluma óptica. En los años 70 y
+              80,
+              surgieron avances clave en modelado, renderizado y animación
+              por
+              empresas como Autodesk y Pixar. En los 90, con el aumento del
+              poder
+              de cómputo, el diseño 3D se expandió a campos como cine,
+              videojuegos, arquitectura e ingeniería.
+            </p>
+            <hr>
+            <p>Con esto en mente se pueden definir 3 tipos principales de
+              diseño
+              3D:</p>
+            <ul>
+              <li class="mb-4 align-items-center">
+                <strong>Poligonal:</strong> Este es el estilo de diseño más
+                popular. Se usa para crear modelos usando polígonos (tienen sus
+                caras, vértices, arístas, etc) y su uso se expande en campos
+                como los videojuegos, cine, animación, realidad virtual, etc.
+                <img src="images/hiphopdance.gif"
+                  alt="Ejemplo de modelo poligonal"
+                  class="img-fluid img-unificada mt-2 rounded shadow-sm"
+                  loading="lazy" />
+              </li>
+              <hr>
+              <li class="mb-4 align-items-center">
+                <strong>Esculpido:</strong> Es un tipo de diseño que se basa en
+                ir deformando el modelo como si fuera arcilla digital. Es una
+                técnica que da resultados mucho más detallados, pero es
+                significativamente más complicado de llevar a cabo. Se usa
+                principalmente para hacer personajes detallados, criaturas
+                fantásticas y arte conceptual
+                <img src="images/sculptingmodelling.jpg"
+                  alt="Modelo 3D esculpido"
+                  class="img-fluid img-unificada mt-2 rounded shadow-sm"
+                  loading="lazy" />
+              </li>
+              <hr>
+              <li class="mb-4 align-items-center">
+                <strong>Paramétrico:</strong> Usa parámetros aritméticosy
+                operaciones
+                lógicas, imprescindible para la industria de la ingeniería,
+                arquitectura y el diseño industrial.
+                <img src="images/aritmetic.gif" alt="Diseño paramétrico en 3D"
+                  class="img-fluid img-unificada mt-2 rounded shadow-sm "
+                  loading="lazy" />
+              </li>
+            </ul>
+            <hr>
+            <p>
+              En este curso vamos a ahondar principalmente en el
+              <strong>diseño
+                poligonal</strong> por su facilidad de aprendizaje y su
+              versatilidad en múltiples industrias.
+            </p>
+            <div class="d-flex justify-content-between mt-4">
+              <button id="btnAnterior" class="btn btn-outline-secondary"
+                title="Ir al tema anterior" disabled>←
+                Anterior</button>
 
-  <a href="Contacto.html" class="btn-contacto btn btn-primary rounded-circle shadow">
-    <i class="bi bi-chat-right-text"></i>
-  </a>
+              <button id="btnMenu" onclick="window.location.href='index.html';"
+                class="btn btn-primary"
+                title="Volver al menú principal">🏠 Menú Principal</button>
+              <button id="btnSiguiente"
+                onclick="window.location.href='TutorialesTema2.html';"
+                class="btn btn-outline-secondary"
+                title="Ir al siguiente tema">Siguiente →</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </section>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    <footer class="text-center py-3 mt-5 border-top footer">
+      <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa, Fabrizio
+        Rolón</p>
+    </footer>
+
+    <a href="Contacto.html"
+      class="btn-contacto btn btn-primary rounded-circle shadow">
+      <i class="bi bi-chat-right-text"></i>
+    </a>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 
 </html>

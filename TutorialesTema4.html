@@ -6,7 +6,7 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-        <title>Inicio - ZAxis</title>
+        <title>Animación 3D - ZAxis</title>
 
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
@@ -87,11 +87,12 @@
                 </div>
             </aside>
             <div id="sidebar-backdrop"></div>
-            <section class="main-content col-lg-9 px-4 mt-5 mt-lg-0 mt-1">
-                <div class="container mt-2">
+            <section
+                class="main-content col-12 col-lg-9 px-4 mt-5 mt-lg-0 mt-1">
+                <div class="container mt-2 px-2 px-sm-4">
                     <div
                         class="row align-items-center justify-content-center g-0">
-                        <header class="mb-5">
+                        <header class="mb-5 text-center text-sm-start">
                             <h1><span class="emoji-title"></span>Tema 4:
                                 Linea de tiempo y animación 3D</h1>
                             <p class="lead">La animación 3D es el arte de darle
@@ -114,16 +115,21 @@
                                 cuadro a cuadro. Es como una regla dividida en
                                 pequeños bloques (llamados fotogramas), y cada
                                 uno representa una fracción de segundo.
-                                <img src="images/vertices.jpg" alt="Vértice"
-                                    class="img-fluid">
+                                <img src="images/timeline.png"
+                                    alt="Linea de tiempo"
+                                    class="img-fluid w-100"
+                                    style="width: 100%; height: auto;">
                                 <br>
                                 <ul>
                                     <li>
                                         En un video típico, hay 24 o 30
                                         fotogramas por segundo (fps).
+                                        <img src="images/fpsdiferencia.gif"
+                                            alt="Linea de tiempo"
+                                            class="img-fluid align-content-center">
                                     </li>
                                     <li>
-                                        Si querés animar algo que dura 2
+                                        <br>Si querés animar algo que dura 2
                                         segundos a 30 fps, vas a tener 60
                                         fotogramas en la línea de tiempo.
                                     </li>
@@ -134,90 +140,80 @@
                             </li>
                             <hr>
 
-                            <li>🟡 <strong>Aristas:</strong> Son las líneas que
-                                conectan dos vértices. Ayudan a definir la
-                                estructura del modelo, especialmente en modelos
-                                de tipo low poly o de geometría clara
-                                <img src="images/edges.jpg" alt="Arista"
+                            <li>🟡 <strong>Keyframes (Fotogramas
+                                    clave):</strong> <br>
+                                Los keyframes son los puntos importantes que
+                                definen un cambio de estado en la animación. Es
+                                como decirle al programa:
+                                “En el fotograma 1, el personaje está quieto, y
+                                en el fotograma 30, está levantando el brazo.”
+                                El software se encarga de interpolar (o rellenar
+                                automáticamente) los movimientos entre esos dos
+                                keyframes, generando una transición suave.
+                                Ejemplo sencillo:
+                                <ul class="mb-6">
+                                    <li>
+                                        Fotograma 1: la esfera está en el suelo.
+                                    </li>
+                                    <li>
+                                        Fotograma 60: la esfera está en el aire.
+                                    </li>
+                                </ul>
+                                <img src="images/pelota.gif"
+                                    alt="Linea de tiempo"
                                     class="img-fluid">
+
+                                → El software crea el salto completo entre ambos
+                                puntos.
                                 <br>
 
-                            </li>
-                            <li>🔺 <strong>Caras:</strong> Se forman cuando tres
-                                o más vértices se conectan para crear una
-                                superficie. Lo más común es usar triángulos o
-                                cuadriláteros, ya que los motores gráficos
-                                procesan mejor estas formas.
-                                <img src="images/faces.jpg" alt="Cara"
-                                    class="img-fluid">
-                                <br>
                             </li>
                         </ul>
 
                         <hr>
 
-                        <h2>Partes Fundamentales de un Modelo 3D</h2>
+                        <h2>Tipos de Keyframes:</h2>
 
-                        <h4> La Malla (Mesh)</h4>
-                        <p>Es la representación visual del modelo. Puede
-                            suavizarse o subdividirse según el estilo del
-                            proyecto. Pero <strong>no puede moverse por sí
-                                sola</strong>.</p>
-
-                        <h4>🦴 El Esqueleto (Rig)</h4>
-                        <p>Es el sistema de huesos internos que le da movilidad
-                            a la malla. Se organiza en <strong>jerarquías
-                                padre-hijo</strong> para permitir animaciones
-                            fluidas como caminar o correr.</p>
-                        <img src="images/meshrig.jpg" alt="Mesh y Rig"
-                            class="img-fluid mt-2 rounded shadow-sm"
-                            style="width: 750px; height: auto" loading="lazy">
-
-                        <p><br>El hueso principal (root) transmite
-                            movimiento a los
-                            demás. Esto permite controlar brazos, piernas o
-                            expresiones faciales fácilmente.</p>
-                        <img src="images/jerarquia.gif"
-                            alt="Jerarquía de huesos"
-                            class="img-fluid img-unificada mt-2 mb-4 rounded shadow-sm"
-                            loading="lazy">
-
-                        <hr>
-
-                        <h2>🎨 Pintado de Pesos (Weight Painting)</h2>
-                        <p>Permite definir qué partes de la malla son afectadas
-                            por cada hueso del esqueleto.</p>
-                        <p>Se representa con colores:</p>
                         <ul>
-                            <li>🔴 <strong>Rojo:</strong> Máxima influencia</li>
-                            <li>🔵 <strong>Azul:</strong> Mínima influencia</li>
-
+                            <li>
+                                <strong>Posición:</strong> Cambia la ubicación
+                                del objeto
+                            </li>
+                            <li>
+                                <strong>Rotación:</strong> Cambia la orientación
+                                del objeto
+                            </li>
+                            <li>
+                                <strong>Escala:</strong> Cambia el tamaño del
+                                objeto
+                            </li>
                         </ul>
-                        <img src="images/weightpaint.jpg" alt="Pintado de pesos"
-                            class="img-fluid mt-2 mb-4 rounded shadow-sm"
-                            style="width: 900px; height: auto;">
-                        <p>Una correcta distribución de pesos evita errores
-                            visuales como estiramientos o torsiones poco
-                            naturales.</p>
-
+                        <ul>
+                            <li>
+                                Tambien se pueden usar para <strong>expresiones
+                                    faciales, movimientos de cámara o cambios de
+                                    iluminación.</strong>
+                            </li>
+                        </ul>
                         <hr>
                         <br>
                     </div>
-                    <div class="d-flex justify-content-between mt-4">
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-between gap-2 mt-4">
                         <button id="btnAnterior"
-                            onclick="window.location.href='TutorialesTema1.html';"
-                            class="btn btn-outline-secondary"
-                            title="Ir al tema anterior">←
-                            Anterior</button>
+                            onclick="window.location.href='TutorialesTema3.html';"
+                            class="btn btn-outline-secondary w-20 w-sm-auto"
+                            title="Ir al tema anterior">← Anterior</button>
 
                         <button id="btnMenu"
                             onclick="window.location.href='index.html';"
-                            class="btn btn-primary"
+                            class="btn btn-primary w-20 w-sm-auto"
                             title="Volver al menú principal">🏠 Menú
                             Principal</button>
+
                         <button id="btnSiguiente"
-                            onclick="window.location.href='TutorialesTema3.html';"
-                            class="btn btn-outline-secondary"
+                            onclick="window.location.href='TutorialesTema4.html';"
+                            class="btn btn-outline-secondary w-20 w-sm-auto"
                             title="Ir al siguiente tema" disabled>Siguiente
                             →</button>
                     </div>
