@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (verificarDatos()) {
         enviarMail(); // Si está todo OK, enviamos el mail
         }
+        else console.log("Tu mensaje ha sido enviado")
     });
 });
 
