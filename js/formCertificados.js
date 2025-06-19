@@ -1,13 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formulario");
+    const modal = document.getElementById("formModal");
+    const cartel = document.getElementById("mensajeExito");
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault(); // Siempre prevenir por defecto
+        e.preventDefault(); // Siempre evitar envío por defecto
 
         if (verificarDatos()) {
-        enviarMail(); // Si está todo OK, enviamos el mail
+            enviarMail();  // En tu código se abre mailto y muestra cartel
         }
-        else console.log("Tu mensaje ha sido enviado")
+    });
+
+    // Evento que detecta cuando se cierra el modal
+    modal.addEventListener('hidden.bs.modal', function () {
+        formulario.reset();  // Limpia los campos del formulario
+        cartel.classList.add("d-none");  // Oculta el cartel de éxito
+
+        // Quitar las clases de validación de los campos
+        const campos = formulario.querySelectorAll("input, textarea");
+        campos.forEach(campo => {
+            campo.classList.remove("is-valid", "is-invalid");
+        });
     });
 });
 
@@ -19,10 +32,10 @@ function verificarDatos() {
         campo.classList.remove("is-valid", "is-invalid");
 
         if (!campo.checkValidity()) {
-        campo.classList.add("is-invalid");
-        valido = false;
+            campo.classList.add("is-invalid");
+            valido = false;
         } else {
-        campo.classList.add("is-valid");
+            campo.classList.add("is-valid");
         }
     });
 
@@ -47,7 +60,7 @@ function enviarMail() {
     const cartel = document.getElementById("mensajeExito");
     cartel.classList.remove("d-none");
 
-    // Opcional: ocultarlo después de unos segundos
+    // Ocultarlo después de unos segundos
     setTimeout(() => {
         cartel.classList.add("d-none");
     }, 5000);
@@ -55,4 +68,3 @@ function enviarMail() {
     // Abrir el mailto
     window.location.href = mailtoLink;
 }
-
