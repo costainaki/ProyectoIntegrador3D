@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Evento que detecta cuando se cierra el modal
     modal.addEventListener('hidden.bs.modal', function () {
+        console.log("Modal cerrado, limpiando formulario");
         formulario.reset();  // Limpia los campos del formulario
         cartel.classList.add("d-none");  // Oculta el cartel de éxito
 
