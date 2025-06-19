@@ -136,7 +136,7 @@
       mesh.geometry.translate(0, -length/2, 0); mesh.renderOrder=1; return mesh;
     }
 
-    // Brazo Izq.
+    // Brazo Izq
     const shoulderL = new THREE.Object3D(); shoulderL.position.set(-0.75,1,0); torso.add(shoulderL);
     const upperArmL = makeSegment(0.7); shoulderL.add(upperArmL);
     const elbowL = new THREE.Object3D(); elbowL.position.set(0,-0.7,0); upperArmL.add(elbowL);
