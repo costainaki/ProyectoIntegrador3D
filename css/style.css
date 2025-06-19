@@ -163,7 +163,7 @@ section.main-content {
   .container {
     max-width: 100% !important;
     width: 100% !important;
-    padding-top: 10px;
+    padding-top: 10px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
