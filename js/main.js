@@ -1,11 +1,11 @@
 const nombre = document.getElementById('nombre')
 const email = document.getElementById('email')
 const telefono = document.getElementById('telefono')
-const compañia = document.getElementById('compañia')
-const formularioContacto = document.getElementById('formularioContacto')
+const compañia = document.getElementById('empresa')
+const formulario = document.getElementById('formulario')
 const elementoError = document.getElementById('error')
 
-formularioContacto.addEventListener('submit', (e)  => {
+formulario.addEventListener('submit', (e)  => {
     let mensajes = []
     if (nombre.value === '' || nombre.value == null) {
         mensajes.push('Ingrese su nombre y apellido')

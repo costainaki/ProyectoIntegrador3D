@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -23,17 +24,20 @@
 
         <script src='./js/main.js' defer></script>
     </head>
+
     <body>
         <nav
-            class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center px-4 py-1">
-            <button class="btn text-black p-0 menu-btn menu-toggle">
+            class="navbar-orange d-lg-none fixed-top d-flex justify-content-between align-items-center position-relative px-4 py-1">
+            <button class="btn text-black p-0 menu-btn menu-toggle z-1">
                 <i class="bi bi-list" style="font-size: 1.3rem;"></i>
             </button>
-            <a href="index.html" class="navbar-brand m-0 px-2">
+            <a href="index.html"
+                class="navbar-brand m-0 px-2 position-absolute start-50 translate-middle-x">
                 <img src="images/logo.png" alt="Logo" style="height: 35px;">
             </a>
         </nav>
-        <button class="btn text-black p-0 menu-btn menu-toggle">
+        <button
+            class="btn text-black p-0 menu-btn menu-toggle d-none d-lg-block">
             <i class="bi bi-list" style="font-size: 1.3rem;"></i>
         </button>
         <div class="layout-wrapper">
@@ -110,8 +114,8 @@
                                 cuadro a cuadro. Es como una regla dividida en
                                 pequeños bloques (llamados fotogramas), y cada
                                 uno representa una fracción de segundo.
-                                <img src="images/vertices.jpg"
-                                    alt="Vértice" class="img-fluid">
+                                <img src="images/vertices.jpg" alt="Vértice"
+                                    class="img-fluid">
                                 <br>
                                 <ul>
                                     <li>
@@ -134,8 +138,8 @@
                                 conectan dos vértices. Ayudan a definir la
                                 estructura del modelo, especialmente en modelos
                                 de tipo low poly o de geometría clara
-                                <img src="images/edges.jpg"
-                                    alt="Arista" class="img-fluid">
+                                <img src="images/edges.jpg" alt="Arista"
+                                    class="img-fluid">
                                 <br>
 
                             </li>
@@ -144,8 +148,8 @@
                                 superficie. Lo más común es usar triángulos o
                                 cuadriláteros, ya que los motores gráficos
                                 procesan mejor estas formas.
-                                <img src="images/faces.jpg"
-                                    alt="Cara" class="img-fluid">
+                                <img src="images/faces.jpg" alt="Cara"
+                                    class="img-fluid">
                                 <br>
                             </li>
                         </ul>
@@ -167,8 +171,7 @@
                             fluidas como caminar o correr.</p>
                         <img src="images/meshrig.jpg" alt="Mesh y Rig"
                             class="img-fluid mt-2 rounded shadow-sm"
-                            style="width: 750px; height: auto"
-                            loading="lazy">
+                            style="width: 750px; height: auto" loading="lazy">
 
                         <p><br>El hueso principal (root) transmite
                             movimiento a los
@@ -190,8 +193,7 @@
                             <li>🔵 <strong>Azul:</strong> Mínima influencia</li>
 
                         </ul>
-                        <img src="images/weightpaint.jpg"
-                            alt="Pintado de pesos"
+                        <img src="images/weightpaint.jpg" alt="Pintado de pesos"
                             class="img-fluid mt-2 mb-4 rounded shadow-sm"
                             style="width: 900px; height: auto;">
                         <p>Una correcta distribución de pesos evita errores
@@ -226,12 +228,17 @@
 
         <footer class="text-center py-3 mt-5 border-top footer">
             <p class="mb-0 text-muted small">© Agostina Collado, Iñaki Costa,
-                Fabrizio
-                Rolón</p>
+                Fabrizio Rolón</p>
         </footer>
+
+        <a href="Contacto.html"
+            class="btn-contacto btn btn-primary rounded-circle shadow">
+            <i class="bi bi-chat-right-text"></i>
+        </a>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/menu.js"></script>
     </body>
+
 </html>
